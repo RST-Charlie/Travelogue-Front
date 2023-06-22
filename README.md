@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+Team RST Travelogue APP!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Overview: 
 
-## Available Scripts
+The scope and purpose of this application is to target a specigic group of users that enjoy travel either domestically in the United States or Internationally.  The purpose of our app is to accomidate the traveling user by providing a means to log and track their adventures in travel and foster an enviornment that will help keep track of memories made and the joy of traveling.  We are absolutley thrilled to undertake this 'adventure' and know that Travelogue will be just as vital to you as your passport!
 
-In the project directory, you can run:
+Features:
 
-### `yarn start`
+User will be able to create a account and manage experiences by entering data into a forum that logs their destination, when they arrived and departed, wether or not it was domestic travel, adding photos, and journal entries.  This will help catalogue the users trips to differnt places making keeping track and recalling memories so much easier.  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Dependencies:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+For the Front End (you will need to use yarn in your terminal to add dependencies):
 
-### `yarn test`
+1.  Add react-router
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ yarn add react-router
 
-### `yarn build`
+ 2.  Add react testing library
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ yarn add react-testing-library
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ 3.  Add react-strap
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ yarn add react-strap
 
-### `yarn eject`
+ 4.  Add strap
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+ yarn add strap
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ 5.  Add bootstrap
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+ yarn add bootsrap
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+ Add testing suites
 
-## Learn More
+ 6.  Add react testing library
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ yarn add react-testing-library
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ 7.  Add jest
 
-### Code Splitting
+ yarn add jest
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+ 8.  STRETCH Add redux
 
-### Analyzing the Bundle Size
+ yarn add redux
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+ 9.  STRETCH Add redux toolkit
 
-### Making a Progressive Web App
+ yarn add redux-toolkit
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+Backend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Add dependencies
 
-### Deployment
+bundle
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+2. rails db:create
 
-### `yarn build` fails to minify
+3. rails db:migrate
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4. rails sprec rspec 
+
+
+
+Contributers include the RST team:
+
+Project Manager: Ramagel Romo
+
+Product Manager: Scott Tuschl 
+
+Tech Lead: Sarah Cherry
+
+Design Lead: Surielis Rodriguez Robles
+
+
+
