@@ -4,7 +4,7 @@ import React from 'react'
 const TravelLogueProtectedIndex = () => {
     return (
         <>
-        <h1>This is the Protected Index Page</h1>
+            <h1>This is the Protected Index Page</h1>
         </>
 
     );
