@@ -14,7 +14,7 @@ import TravelLogueShow from './pages/TravelLogueShow';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-
+// Did not complete any work due to time constraints for header, however, I noticed react-strap was not loaded as a dependency.  I added react-strap --ST
 const App = () => {
     return (
         <div>
