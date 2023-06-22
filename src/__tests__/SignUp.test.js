@@ -4,21 +4,20 @@ import { BrowserRouter } from 'react-router-dom';
 import SignUp from '../pages/SignUp';
 
 describe('<SignUp />', () => {
-  beforeEach(() => {
-    render(
-      <BrowserRouter>
-        <SignUp />
-      </BrowserRouter>
-    );
-  });
+    beforeEach(() => {
+        render(
+            <BrowserRouter>
+                <SignUp />
+            </BrowserRouter>
+        );
+    });
 
-  it('renders without crashing', () => {
+    it('renders without crashing', () => {
 
-  });
+    });
 
-  it('displays the SignUp component', () => {
-    
-    const signUpComponent = screen.getByTestId('signup-component');
-    expect(signUpComponent).toBeInTheDocument();
-  });
+    it('displays the SignUp component', () => {
+        const signUpComponent = screen.getByTestId('signup-component');
+        expect(signUpComponent).toBeInTheDocument();
+    });
 });
