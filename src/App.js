@@ -14,7 +14,6 @@ import TravelLogueShow from './pages/TravelLogueShow';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-// Did not complete any work due to time constraints for header, however, I noticed react-strap was not loaded as a dependency.  I added react-strap --ST
 const App = () => {
     return (
         <div>
@@ -24,8 +23,8 @@ const App = () => {
                 <Route path="/AboutUs" element={<AboutUs />} />
                 <Route path="/TravelLogueIndex" element={<TravelLogueIndex />} />
                 <Route path="/TravelLogueShow" element={<TravelLogueShow />} />
-                <Route path="/SignIn" element={<SignIn />} />
-                <Route path="/SignUp" element={<SignUp />} />
+                <Route path="/login" element={<SignIn />} />
+                <Route path="/signup" element={<SignUp />} />
                 <Route path="/TravelLogueProtectedIndex"element={<TravelLogueProtectedIndex />}/>
                 <Route path="/TravelLogueNew" element={<TravelLogueNew />} />
                 <Route path="/TravelLogueEdit" element={<TravelLogueEdit />} />
