@@ -20,7 +20,7 @@ const SignUp = () => {
 
   return (
     <>
-      <div id="signup">
+      <div id="signup" data-testid="signup-component"> {/* Add data-testid attribute */}
         <form ref={formRef} onSubmit={handleSubmit}>
           Email: <input type="email" name="email" placeholder="email" />
           <br />
