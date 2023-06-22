@@ -24,8 +24,8 @@ const App = () => {
                 <Route path="/AboutUs" element={<AboutUs />} />
                 <Route path="/TravelLogueIndex" element={<TravelLogueIndex />} />
                 <Route path="/TravelLogueShow" element={<TravelLogueShow />} />
-                <Route path="/SignIn" element={<SignIn />} />
-                <Route path="/SignUp" element={<SignUp />} />
+                <Route path="/login" element={<SignIn />} />
+                <Route path="/signup" element={<SignUp />} />
                 <Route path="/TravelLogueProtectedIndex"element={<TravelLogueProtectedIndex />}/>
                 <Route path="/TravelLogueNew" element={<TravelLogueNew />} />
                 <Route path="/TravelLogueEdit" element={<TravelLogueEdit />} />
