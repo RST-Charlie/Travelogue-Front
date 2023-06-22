@@ -14,29 +14,30 @@ import TravelLogueShow from './pages/TravelLogueShow';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
+
 const App = () => {
-  const [currentUser, setCurrentUser] = useState(null);
+    const [currentUser, setCurrentUser] = useState(null);
 
-  const url = "http://localhost:3000";
+    const url = "http://localhost:3000";
 
-  return (
-    <div>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/AboutUs" element={<AboutUs />} />
-        <Route path="/TravelLogueIndex" element={<TravelLogueIndex />} />
-        <Route path="/TravelLogueShow" element={<TravelLogueShow />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<SignUp />} />
-        <Route path="/TravelLogueProtectedIndex" element={<TravelLogueProtectedIndex />} />
-        <Route path="/TravelLogueNew" element={<TravelLogueNew />} />
-        <Route path="/TravelLogueEdit" element={<TravelLogueEdit />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-      <Footer />
-    </div>
-  );
+    return (
+        <div>
+            <Header />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/AboutUs" element={<AboutUs />} />
+                <Route path="/TravelLogueIndex" element={<TravelLogueIndex />} />
+                <Route path="/TravelLogueShow" element={<TravelLogueShow />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/signup" element={<SignUp />} />
+                <Route path="/TravelLogueProtectedIndex" element={<TravelLogueProtectedIndex />} />
+                <Route path="/TravelLogueNew" element={<TravelLogueNew />} />
+                <Route path="/TravelLogueEdit" element={<TravelLogueEdit />} />
+                <Route path="*" element={<NotFound />} />
+            </Routes>
+            <Footer />
+        </div>
+    );
 }
 
 export default App;
