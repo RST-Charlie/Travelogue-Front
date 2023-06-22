@@ -34,11 +34,11 @@ const Login = ({ login }) => {
             <h1>Sign In</h1>
             {!loggedIn ? (
                 <form ref={formRef} onSubmit={handleSubmit}>
-                Email: <input type="email" name="email" placeholder="email" />
-                <br />
-                Password: <input type="password" name="password" placeholder="password" />
-                <br />
-                <input type="submit" value="Login" />
+                    Email: <input type="email" name="email" placeholder="email" />
+                    <br />
+                    Password: <input type="password" name="password" placeholder="password" />
+                    <br />
+                    <input type="submit" value="Login" />
                 </form>
             ) : (
                 <div>
@@ -48,7 +48,7 @@ const Login = ({ login }) => {
             )}
             <br />
             <div>
-            Not registered yet, <a href="/signup">Signup</a>
+                Not registered yet, <a href="/signup">Signup</a>
             </div>
         </div>
     );
