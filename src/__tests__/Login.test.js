@@ -1,19 +1,19 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import SignUp from '../pages/SignUp';
+import Login from '../pages/Login';
 
-describe('<SignUp />', () => {
+describe('<Login />', () => {
   beforeEach(() => {
     render(
       <BrowserRouter>
-        <SignUp />
+        <Login />
       </BrowserRouter>
     );
   });
 
-  it('has an email input', () => {
-    const emailInput = screen.getByPlaceholderText('email');
-    expect(emailInput).toBeInTheDocument();
+  it('renders without crashing', () => {
+    const emailLabel = screen.getByText(/email/i); 
+    expect(emailLabel).toBeInTheDocument();
   });
 });
