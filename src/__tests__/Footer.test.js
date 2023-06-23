@@ -7,8 +7,8 @@ describe('Footer', () => {
     const { getByText } = render(<Footer />);
     const footerText = getByText((content, element) => {
         return (
-        content === 'Need to reach us? Drop us a line at:' &&
-        element.tagName.toLowerCase() === 'a'
+            content === 'Need to reach us? Drop us a line at:' &&
+            element.tagName.toLowerCase() === 'a'
         );
     });
     expect(footerText).toBeInTheDocument();
