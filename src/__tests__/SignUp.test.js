@@ -4,16 +4,16 @@ import { BrowserRouter } from 'react-router-dom';
 import SignUp from '../pages/SignUp';
 
 describe('<SignUp />', () => {
-  beforeEach(() => {
-    render(
-      <BrowserRouter>
-        <SignUp />
-      </BrowserRouter>
-    );
-  });
+    beforeEach(() => {
+        render(
+            <BrowserRouter>
+                <SignUp />
+            </BrowserRouter>
+        );
+    });
 
-  it('has an email input', () => {
-    const emailInput = screen.getByPlaceholderText('email');
-    expect(emailInput).toBeInTheDocument();
-  });
+    it('has an email input', () => {
+        const emailInput = screen.getByPlaceholderText('email');
+        expect(emailInput).toBeInTheDocument();
+    });
 });
