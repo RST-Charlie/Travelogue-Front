@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import AboutUs from './pages/AboutUs';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
-import SignIn from './pages/SignIn';
+import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import TravelLogueEdit from './pages/TravelLogueEdit';
 import TravelLogueIndex from './pages/TravelLogueIndex';
@@ -14,7 +14,12 @@ import TravelLogueShow from './pages/TravelLogueShow';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
+
 const App = () => {
+    const [currentUser, setCurrentUser] = useState(null);
+
+    const url = "http://localhost:3000";
+
     return (
         <div className="App">
             <Header />
@@ -23,9 +28,9 @@ const App = () => {
                 <Route path="/AboutUs" element={<AboutUs />} />
                 <Route path="/TravelLogueIndex" element={<TravelLogueIndex />} />
                 <Route path="/TravelLogueShow" element={<TravelLogueShow />} />
-                <Route path="/login" element={<SignIn />} />
+                <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<SignUp />} />
-                <Route path="/TravelLogueProtectedIndex"element={<TravelLogueProtectedIndex />}/>
+                <Route path="/TravelLogueProtectedIndex" element={<TravelLogueProtectedIndex />} />
                 <Route path="/TravelLogueNew" element={<TravelLogueNew />} />
                 <Route path="/TravelLogueEdit" element={<TravelLogueEdit />} />
                 <Route path="*" element={<NotFound />} />
