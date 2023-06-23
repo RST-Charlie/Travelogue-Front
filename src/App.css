@@ -1,14 +1,14 @@
 html,
 body {
-  height: 100vh;
-  margin: 0;
-  padding: 0;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 
 .App {
-  background: linear-gradient(90deg, #8c52ff, #ff914d);
-  min-height: 100vh;
+    background: linear-gradient(90deg, #8c52ff, #ff914d);
+    min-height: 100vh;
 }
 
 

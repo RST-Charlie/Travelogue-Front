@@ -8,17 +8,17 @@ const Header = () => {
     return (
         <>
             <Navbar className="Navbar">
-              <NavbarBrand href="/">
-                <img
-                alt="logo"
-                src={Airplane}
-                style={{
-                    height: 40,
-                    width: 40
-                }}
-                />
-                Travelogue
-            </NavbarBrand>
+                <NavbarBrand href="/">
+                    <img
+                    alt="logo"
+                    src={Airplane}
+                    style={{
+                        height: 40,
+                        width: 40
+                    }}
+                    />
+                    Travelogue
+                </NavbarBrand>
             <div className="Links">
                 <Nav className="nav justify-content-end">
                     <NavItem>
