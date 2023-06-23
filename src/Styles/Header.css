@@ -1,0 +1,26 @@
+.logo{
+    justify-content: left;
+}
+
+.Links {
+    justify-content: flex-end;
+    color:white;
+  }
+
+.NavLink {
+    color:whitesmoke !important;
+}
+
+.Navbar {
+    background-color:#5e17eb;
+}
+
+a.nav-link{
+    color:whitesmoke;
+    font-size: x-large;
+}
+
+a.navbar-brand{
+    color:whitesmoke;
+    font-size:xx-large;
+}
