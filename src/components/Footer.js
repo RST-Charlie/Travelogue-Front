@@ -1,10 +1,13 @@
-import React from 'react' 
-
+import React from 'react'
+import "../Styles/Footer.css"
 
 const Footer = () => {
     return (
         <>
-            <h1>This is the footer</h1>
+            <div className="footer">
+                <a>Need to reach us? Drop us a line at:</a>
+                <a>rstcharlie2023@yahoo.com</a>
+            </div>
         </>
 
     );
