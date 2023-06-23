@@ -21,7 +21,7 @@ const App = () => {
     const url = "http://localhost:3000";
 
     return (
-        <div>
+        <div className="App">
             <Header />
             <Routes>
                 <Route path="/" element={<Home />} />
