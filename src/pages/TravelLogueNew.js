@@ -19,6 +19,15 @@ const TravelLogueNew = ({ createTrip }) => {
     const handleChange = (e) => {
         setNewTrip({ ...newTrip, [e.target.name]: e.target.value })
     }
+
+    const handleSwitchChange = (e) => {
+        const { name, checked } = e.target;
+        setNewTrip((prevState) => ({
+            ...prevState, [name]: checked,
+        }));
+    };
+
+
     const handleClick = () => {
         createTrip(newTrip)
     }
@@ -362,9 +371,10 @@ const TravelLogueNew = ({ createTrip }) => {
                                 type="switch"
                                 role='switch'
                                 name="international"
-                                onChange={handleChange}
-                                value={newTrip.international}
+                                checked={newTrip.international}
+                                onChange={handleSwitchChange}
                             />
+                                {console.log( newTrip.title, newTrip.photo, newTrip.city, newTrip.state, newTrip.country, newTrip.region, newTrip.international, newTrip.start_date, newTrip.end_date, newTrip.entry )}
                         </FormGroup>                    
                     </Col>
 

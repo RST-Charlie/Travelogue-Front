@@ -21,7 +21,7 @@ const App = () => {
     const [trips, setTrips] = useState(mockTrips);
 
     const createTrip = (createdTrip) => {
-
+        console.log(createdTrip);
     }
 
     const url = "http://localhost:3000";
