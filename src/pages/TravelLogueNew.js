@@ -235,9 +235,9 @@ const TravelLogueNew = ({ createTrip }) => {
                 </Row>
             </Form>
             {error && (
-                <Alert color="info" className='text-center mx-auto my-2' style={{ width: "50vw" }}>
+                <Alert color="danger" className='text-center mx-auto my-2' style={{ width: "50vw" }}>
                     Error!  <br />
-                    Please make sure you are logged in and fill out all required fields: title, entry, country, and region. 
+                    Please make sure you are logged in and have filled out all required fields: title, entry, country, and region. 
                 </Alert>
             )}
         </>
