@@ -13,10 +13,16 @@ import TravelLogueProtectedIndex from './pages/TravelLogueProtectedIndex';
 import TravelLogueShow from './pages/TravelLogueShow';
 import Header from './components/Header';
 import Footer from './components/Footer';
-
+import mockUsers from './mockUsers'
+import mockTrips from './mockTrips'
 
 const App = () => {
-    const [currentUser, setCurrentUser] = useState(null);
+    const [currentUser, setCurrentUser] = useState(mockUsers[0]);
+    const [trips, setTrips] = useState(mockTrips);
+
+    const createTrip = (createdTrip) => {
+
+    }
 
     const url = "http://localhost:3000";
 
@@ -31,7 +37,7 @@ const App = () => {
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/TravelLogueProtectedIndex" element={<TravelLogueProtectedIndex />} />
-                <Route path="/TravelLogueNew" element={<TravelLogueNew />} />
+                <Route path="/TravelLogueNew" element={<TravelLogueNew createTrip={createTrip} />} />
                 <Route path="/TravelLogueEdit" element={<TravelLogueEdit />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
