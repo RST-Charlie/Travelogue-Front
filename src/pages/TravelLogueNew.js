@@ -1,7 +1,8 @@
 import React, { useState } from 'react' 
-import { Form, FormGroup, Label, Input, Button, Row, Col } from "reactstrap"
+import { Form, FormGroup, Label, Input, Button, Row, Col, Alert } from "reactstrap"
 import countries from '../components/Countries'
 import regions from '../components/Regions'
+import { useHistory } from 'react-router-dom'
 
 const TravelLogueNew = ({ createTrip }) => {
     const [newTrip, setNewTrip] = useState({
@@ -28,14 +29,26 @@ const TravelLogueNew = ({ createTrip }) => {
         }));
     };
 
-
     const handleClick = () => {
-        createTrip(newTrip)
+        if(
+            newTrip.title !== "" && 
+            newTrip.entry !== "" && 
+            newTrip.country !== "" && 
+            newTrip.region !== ""
+            ) {
+            createTrip(newTrip)
+            window.location.href="/TravelLogueIndex"
+        }
+        else {
+            setError(true)
+        }
     }
+
+    const [error, setError] = useState(false)
 
     return (
         <>
-            <Form className="new-trip-form mx-5 mt-5">
+            <Form className="new-trip-form mx-4 mt-3">
                 <Row>
                     <Col className="form-group md-4">
                         <FormGroup>
@@ -113,11 +126,11 @@ const TravelLogueNew = ({ createTrip }) => {
                                 type="select"
                                 name="country"
                                 placeholder='default'
-                                onChange={handleChange}
                                 value={newTrip.country}
                                 className='text-secondary'
+                                onChange={handleChange}   
                             >
-                                {countries}
+                            {countries}
                             </Input>
                         </FormGroup>
                     </Col>
@@ -137,7 +150,7 @@ const TravelLogueNew = ({ createTrip }) => {
                                 className='text-secondary'
                                 onChange={handleChange}
                                 value={newTrip.region}
-                            >
+                                >
                                 {regions}
                             </Input>
                         </FormGroup>
@@ -155,7 +168,7 @@ const TravelLogueNew = ({ createTrip }) => {
                                 name="international"
                                 checked={newTrip.international}
                                 onChange={handleSwitchChange}
-                            />
+                                />
                         </FormGroup>                    
                     </Col>
 
@@ -171,7 +184,7 @@ const TravelLogueNew = ({ createTrip }) => {
                                 className='text-secondary'
                                 onChange={handleChange}
                                 value={newTrip.start_date}
-                            />
+                                />
                         </FormGroup>                    
                     </Col>
 
@@ -187,7 +200,7 @@ const TravelLogueNew = ({ createTrip }) => {
                                 className='text-secondary'
                                 onChange={handleChange}
                                 value={newTrip.end_date}
-                            />
+                                />
                         </FormGroup>                    
                     </Col>
                 </Row>
@@ -205,7 +218,7 @@ const TravelLogueNew = ({ createTrip }) => {
                                 placeholder='(Required) How was your trip? Spill the deets!'
                                 onChange={handleChange}
                                 value={newTrip.entry}
-                            />
+                                />
                         </FormGroup>   
                     </Col>
                 </Row>
@@ -213,15 +226,20 @@ const TravelLogueNew = ({ createTrip }) => {
                     <Col className='text-center'>
                         <Button
                             onClick={handleClick}
-                            href="/TravelLogueIndex"
-                            type="submit"
+                            type="button"
                             className="button bg-primary text-light"
-                        >
+                            >
                             Add this trip to my Travelogue!
                         </Button>
                     </Col>
                 </Row>
-            </Form>,
+            </Form>
+            {error && (
+                <Alert color="info" className='text-center mx-auto my-2' style={{ width: "50vw" }}>
+                    Error!  <br />
+                    Please make sure you are logged in and fill out all required fields: title, entry, country, and region. 
+                </Alert>
+            )}
         </>
     );
 }

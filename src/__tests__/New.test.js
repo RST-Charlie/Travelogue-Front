@@ -18,4 +18,10 @@ describe('<TravelLogueNew />', () => {
         fireEvent.change(input, { target: { value: 'Test input' } });
         expect(input.value).toBe('Test input');
     });
+
+    it('displays an error message when information is submitted and post is not valid', () => {
+        const submit = screen.getByText(/Add this trip to my Travelogue!/i);
+        fireEvent.click(submit);
+        expect(screen.getByText(/Please make sure you are logged in and fill out all required fields: title, entry, country, and region./i))
+    })
 });
