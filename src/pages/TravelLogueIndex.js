@@ -1,5 +1,5 @@
 import React from "react"
-import { Card, CardImg, CardBody, CardTitle, CardSubtitle, Button, Container } from "reactstrap"
+import { Card, CardBody, CardTitle, CardSubtitle, Button, Container } from "reactstrap"
 
 const TravelLogueIndex = ({trips}) => {
 
