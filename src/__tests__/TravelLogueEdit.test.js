@@ -12,7 +12,7 @@ describe("<TravelLogueEdit />", () => {
     });
 
     it("renders the travellogue edit page", () => {
-        const element = screen.getByRole('button', { name: /submit updated trip/i });
+        const element = screen.getByRole('button', { name: /Confirm Changes!/i });
         expect(element).toBeInTheDocument();
     });
 });

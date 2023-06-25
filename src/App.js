@@ -23,7 +23,12 @@ const App = () => {
     const createTrip = (createdTrip) => {
         console.log(createdTrip);
     }
-
+    const updateTrip = (updatedTrip) => {
+        console.log(updatedTrip);
+    }
+    const deleteTrip = (deleteTrip) => {
+        console.log(deleteTrip);
+    }
     const url = "http://localhost:3000";
 
     return (
@@ -38,12 +43,12 @@ const App = () => {
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/TravelLogueProtectedIndex" element={<TravelLogueProtectedIndex />} />
                 <Route path="/TravelLogueNew" element={<TravelLogueNew createTrip={createTrip} />} />
-                <Route path="/TravelLogueEdit" element={<TravelLogueEdit />} />
+                <Route path="/TravelLogueEdit" element={<TravelLogueEdit updateTrip={updateTrip} deleteTrip={deleteTrip} />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
         </div>
-    );
+    )
 }
 
 export default App;
