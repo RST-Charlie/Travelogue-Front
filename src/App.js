@@ -36,7 +36,7 @@ const App = () => {
                 <Route path="/TravelLogueShow" element={<TravelLogueShow />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<SignUp />} />
-                <Route path="/TravelLogueProtectedIndex" element={<TravelLogueProtectedIndex />} />
+                <Route path="/TravelLogueProtectedIndex" element={<TravelLogueProtectedIndex currentUser={currentUser} trips={trips} />} />
                 <Route path="/TravelLogueNew" element={<TravelLogueNew createTrip={createTrip} />} />
                 <Route path="/TravelLogueEdit" element={<TravelLogueEdit />} />
                 <Route path="*" element={<NotFound />} />
