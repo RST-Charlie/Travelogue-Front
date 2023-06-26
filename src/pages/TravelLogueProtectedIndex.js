@@ -1,61 +1,80 @@
-import React, { useEffect, useState } from 'react';
-import { Card, CardGroup, CardImg, CardBody, CardTitle, CardText, Button } from 'reactstrap';
-import mockTrips from '../mockTrips'
-import ani from '../assets/turkey.jpg'
-import sunset from '../assets/sunset.jpg'
-import austrailia from '../assets/austrailia.jpeg'
-import istockphoto from '../assets/istockphoto-147049964-612x612.jpg'
+import React from 'react';
+import { Card, CardGroup, CardSubtitle, Container, CardImg, CardBody, CardTitle, CardText, Button } from 'reactstrap';
+import mockTrips from '../mockTrips';
+import ani from '../assets/turkey.jpg';
+import sunset from '../assets/sunset.jpg';
+import austrailia from '../assets/austrailia.jpeg';
+import istockphoto from '../assets/istockphoto-147049964-612x612.jpg';
+import hawaii from '../assets/hawaii.webp';
+import '../Styles/TravelLogueProtectedIndex.css';
 
-const TravelLogueProtectedIndex = ({ currentUser }) => {
-  const [trips, setTrips] = useState({mockTrips});
-
-  useEffect(() => {
-    // Fetch data from the backend when the component mounts
-    fetchData();
-  }, []);
-
-  const fetchData = async () => {
-    try {
-      // Make an API request to your backend server to fetch the trips
-      const response = await fetch('/api/trips'); // Replace with your backend endpoint
-
-      if (response.ok) {
-        const data = await response.json();
-
-        // Set the retrieved trips to the state
-        setTrips(data);
-      } else {
-        console.error('Error fetching trips:', response.statusText);
-      }
-    } catch (error) {
-      console.error('Error fetching trips:', error);
-    }
-  };
-
+const TravelLogueProtectedIndex = ({ currentUser,trips }) => {
+ 
   return (
-    <div className="container card-columns-3 mt-2 d-flex flex-wrap">
-      <CardGroup>
-        {mockTrips.map((trip) => (
-          <Card key={trip.id} className="my-card">
-            <CardImg className="card-img" alt={trip.title} src={trip.photo} top />
-            <CardBody>
-              <CardTitle tag="h5" className="card-title">
-                {trip.title}
-              </CardTitle>
-              <CardText className="card-description">{trip.entry}</CardText>
-              <div className="button-container">
-                <Button className="btn-edit" color="secondary">
-                  Edit
-                </Button>
-                <Button className="btn-delete" color="danger">
-                  Delete
-                </Button>
-              </div>
-            </CardBody>
-          </Card>
-        ))}
-      </CardGroup>
-    </div>
+    <Container 
+    className="
+        d-flex
+        flex-wrap
+        justify-content-center
+        align-items-center
+        card-columns-3 
+        mt-2 px-2 py-2
+        align-items center"
+>
+    {trips?.map((trip, index) => {
+        return(
+            <Card 
+                key={index} 
+                hover
+                style={{
+                    width:"19rem",
+                    height: "25rem"
+                }}
+                className="
+                    my-card
+                    each-card
+                    my-4 mx-4
+                    shadow-5"
+            >
+                <CardImg 
+                    alt={`Photo from a trip to ${trip.country}`}
+                    src={trip.photo}
+                    style={{
+                        width:"100%",
+                        height:"60%",
+                        position:"relative"
+                    }}
+                />
+
+                <CardBody className="px-3 py-4">
+                    <CardTitle 
+                        className="card-title"
+                    >
+                        {trip.title}
+                    </CardTitle>
+                    <CardSubtitle
+                        className="text-muted"
+                    >
+                        {trip.country}
+                    </CardSubtitle>  
+                    <div 
+                        className="
+                            justify-content-between
+                            align-items-center
+                            text-center">
+                        <Button 
+                            className="btn-details mt-3 text-center" 
+                            color="info"
+                            href={`/TravelLogueShow/${trip.id}`}
+                        >   
+                            See travelogue
+                        </Button>
+                    </div>
+                </CardBody>
+            </Card>
+        )
+    })}
+</Container> 
   );
 };
 
