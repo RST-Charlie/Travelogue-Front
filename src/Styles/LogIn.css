@@ -1,0 +1,78 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 8vh;
+}
+  
+h1 {
+    padding-bottom: 5vw;
+    background-color: #5e17eb;
+    width: 30%;
+    padding: 10px;
+    border-radius: 20vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 9vw;
+    color: white;
+}
+
+.login-banner {
+    font-size: 8vw;
+    color: white;
+    padding-left: 4vw;
+}
+  
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 80%;
+    margin-top: 20px;
+}
+  
+label {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 2vw;
+}
+  
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 25px;
+    background-color: #5e17eb;
+    color: white;
+}
+  
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    color: white;
+}
+  
+.submit-button {
+    background-color: #5e17eb;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+  
+.login-link {
+    font-size: 1.7vw;
+}
+  
+.submit {
+    font-size: 2vw;
+    border-radius: 25px;
+}
+  

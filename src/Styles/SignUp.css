@@ -1,0 +1,96 @@
+.signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3vh;
+}
+  
+p.title {
+    padding-bottom: 5vw;
+    background-color: #5e17eb;
+    width: 30%;
+    padding: 10px;
+    border-radius: 20vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+  
+.banner {
+    font-size: 8vw;
+    color: white;
+}
+  
+.signup-statement {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    padding-left: 4vw;
+    width: 100%; 
+}
+  
+.statement {
+    font-size: 4vw;
+    color: white;
+    text-align: center;
+}
+  
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%; 
+    margin-top: 20px; 
+}
+  
+label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    color:white;
+    font-size:2vw;
+}
+  
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 25px; 
+    background-color: #5e17eb;
+    color: white;
+}
+  
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    color: white;
+}
+  
+input[type="submit"] {
+    background-color: #5e17eb;
+    color: white;
+    border: none;
+    border-radius: 20px; 
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.login-link{
+    font-size:1.7vw;
+}
+
+.submit{
+    font-size:2vw;
+    border-radius: 25px;
+}
+  
+  
+  
+  
+  
+  
+  
+
