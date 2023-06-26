@@ -4,7 +4,7 @@ import NotFound from '../pages/NotFound';
 
 describe('NotFound Component', () => {
     it('renders without errors', () => {
-    render(<NotFound />);
+        render(<NotFound />);
     });
 
     it('displays the correct error message', () => {

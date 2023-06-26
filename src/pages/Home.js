@@ -10,16 +10,19 @@ const Home = () => {
             <div className="home">
                 <div className='logo-mission'>
                     <p className='animate__animated animate__slideInUp title' >
-                    Travelogue
+                        Travelogue
                     </p>
-                
                     <p  className="animate__animated animate__slideInUp mission" >
-                    Track your globetrotting adventures and conquer the
+                        Track your globetrotting adventures and conquer the
                     <br />
-                    world, one destination at a time.
+                        world, one destination at a time.
                     </p>
                 </div>
-                <img src={Plane} className="move-image" alt="Plane Banner"/>
+                <img 
+                    src={Plane} 
+                    className="move-image" 
+                    alt="Plane Banner"
+                />
             </div>
         </>
     );
