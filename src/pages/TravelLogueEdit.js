@@ -14,22 +14,22 @@ const TravelLogueEdit = ({ trip, updateTrip, deleteTrip }) => {
     const [editTrip, setEditTrip] = useState({ ...trip });
   
     const handleChange = (e) => {
-      setEditTrip({ ...editTrip, [e.target.name]: e.target.value });
+        setEditTrip({ ...editTrip, [e.target.name]: e.target.value });
     };
   
     const handleClick = () => {
-      updateTrip(editTrip);
-      window.location.href="/TravelLogueIndex"
+        updateTrip(editTrip);
+        window.location.href="/TravelLogueIndex"
     };
   
     const handleDelete = () => {
-      deleteTrip(editTrip.id); 
+        deleteTrip(editTrip.id); 
     };
   
      
-  return (
-    <>
-    <Form className="edit-trip-form mx-5 mt-5">
+    return (
+        <>
+            <Form className="edit-trip-form mx-5 mt-5">
                 <Row>
                     <Col className="form-group md-4">
                         <FormGroup>
@@ -130,7 +130,7 @@ const TravelLogueEdit = ({ trip, updateTrip, deleteTrip }) => {
                                 className='text-secondary'
                                 onChange={handleChange}
                                 value={editTrip.region}>
-                               {regions}
+                            {regions}
                             </Input>
                         </FormGroup>
                     </Col>
@@ -201,15 +201,20 @@ const TravelLogueEdit = ({ trip, updateTrip, deleteTrip }) => {
                         </FormGroup>   
                     </Col>
                 </Row>
+
                 <Row>
                     <Col className='text-center'>
-                    <Button onClick={handleClick}>Confirm Changes!</Button>
-                    <Button onClick={handleDelete}>Delete Trip</Button>
+                        <Button onClick={handleClick}>
+                            Confirm Changes!
+                        </Button>
+                        <Button onClick={handleDelete}>
+                            Delete Trip
+                        </Button>
                     </Col>
                 </Row>
-            </Form>,
+            </Form>
         </>
     );
-  }
+}
 
 export default TravelLogueEdit;
