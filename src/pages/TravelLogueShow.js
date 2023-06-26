@@ -53,7 +53,8 @@ const TravelLogueShow = ({trips}) => {
                                 <Button 
                                     color="primary"
                                     className="float-right"
-                                    href={`/TravelLogueEdit/${currentTrip.id}`}>
+                                    disabled
+                                >
                                     Edit
                                 </Button>
                             </CardFooter>

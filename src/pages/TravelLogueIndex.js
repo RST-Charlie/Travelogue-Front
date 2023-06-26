@@ -1,35 +1,49 @@
 import React from "react"
-import { Card, CardBody, CardTitle, CardSubtitle, Button, Container } from "reactstrap"
+import css from "../Styles/DemoIndex.css"
+import { Card, CardBody, CardTitle, CardSubtitle, Button, Container, CardImg } from "reactstrap"
 
 const TravelLogueIndex = ({trips}) => {
 
     return(
         <Container 
-            className="card-columns-3 mt-2"
-            style={{ 
-                display: "flex",
-                flexDirection:"row", 
-                flexWrap: "wrap",
-            }}
+            className="
+                d-flex
+                flex-wrap
+                justify-content-center
+                align-items-center
+                card-columns-3 
+                mt-2 px-2 py-2
+                align-items center"
         >
             {trips?.map((trip, index) => {
                 return(
                     <Card 
                         key={index} 
-                        style={{width: "15rem",
+                        hover
+                        style={{
+                            width:"19rem",
+                            height: "25rem"
                         }}
                         className="
+                            my-card
                             each-card
-                            text-center
-                            my-3 mx-auto"
+                            my-4 mx-4
+                            shadow-5"
                     >
-                        <img 
+                        <CardImg 
                             alt={`Photo from a trip to ${trip.country}`}
                             src={trip.photo}
+                            style={{
+                                width:"100%",
+                                height:"60%",
+                                position:"relative"
+                            }}
                         />
 
-                        <CardBody>
-                            <CardTitle tag="h5">
+                        <CardBody className="px-3 py-4">
+                            <CardTitle 
+                                className="card-title"
+                            >
                                 {trip.title}
                             </CardTitle>
                             <CardSubtitle
@@ -37,29 +51,25 @@ const TravelLogueIndex = ({trips}) => {
                             >
                                 {trip.country}
                             </CardSubtitle>  
-
-                            <CardSubtitle
-                                className="text-muted"
-                            >
-                                {trip.start_date} to {trip.end_date}
-                            </CardSubtitle>      
+                            <div 
+                                className="
+                                    justify-content-between
+                                    align-items-center
+                                    text-center">
+                                <Button 
+                                    className="btn-details mt-3 text-center" // d-flex mx-5 justify-content-space-between align-items-center text-center" 
+                                    color="info"
+                                    
+                                >   
+                                    See travelogue
+                                </Button>
+                            </div>
                         </CardBody>
-                        <Button 
-                            color="info"
-                            href={`/TravelLogueShow/${trip.id}`}
-                        >
-                                See travelogue
-                        </Button>
-                        <Button 
-                            color="primary"
-                            href={`/TravelLogueEdit/${trip.id}`}>
-                                Edit
-                        </Button>
                     </Card>
                 )
             })}
         </Container> 
     )
 }
-
+// Create an account and get started today! 
 export default TravelLogueIndex;
