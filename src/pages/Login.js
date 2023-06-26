@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../Styles/Login.css';
 
 const Login = ({ login }) => {
     const formRef = useRef();
@@ -7,13 +8,11 @@ const Login = ({ login }) => {
     const [loggedIn, setLoggedIn] = useState(false);
 
     const handleLogin = () => {
-
         setLoggedIn(true);
         navigate('/');
     };
 
     const handleLogout = () => {
-
         setLoggedIn(false);
     };
 
@@ -30,29 +29,42 @@ const Login = ({ login }) => {
     };
 
     return (
-        <div id="login">
-            <h1>Sign In</h1>
-            {!loggedIn ? (
-                <form ref={formRef} onSubmit={handleSubmit}>
-                    Email: <input type="email" name="email" placeholder="email" />
-                    <br />
-                    Password: <input type="password" name="password" placeholder="password" />
-                    <br />
-                    <input type="submit" value="Login" />
+        <div className="wrapper">
+            <div className="form-wrapper sign-in">
+                <form onSubmit={handleSubmit} ref={formRef}>
+                    <h2>Log In</h2>
+                    <div className="input-group">
+                        <label htmlFor="email">
+                            Username
+                        </label>
+                        <input type="text" name="email" required />
+                    </div>
+                    <div className="input-group">
+                        <label htmlFor="password">
+                            Password
+                        </label>
+                        <input type="password" name="password" required />
+                    </div>
+                    <div className="remember">
+                        <label htmlFor="remember">
+                            <input type="checkbox" id="remember" /> Remember Me
+                        </label>
+                    </div>
+                    <button type="submit">
+                        Log In
+                    </button>
+                    <div className="signup-link">
+                        <p>
+                            Don't have an account yet? 
+                            <a href="#" className="signup-link">
+                                Sign Up
+                            </a>
+                        </p>
+                    </div>
                 </form>
-            ) : (
-                <div>
-                    <p>You are logged in!</p>
-                    <button onClick={handleLogout}>Logout</button>
-                </div>
-            )}
-            <br />
-            <div>
-                Not registered yet, <a href="/signup">Signup</a>
             </div>
         </div>
     );
 };
 
 export default Login;
-
