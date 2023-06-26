@@ -1,5 +1,6 @@
 import React from 'react' 
 import "../Styles/NotFound.css"
+import 'animate.css';
 
 
 const NotFound = () => {
