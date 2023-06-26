@@ -23,7 +23,12 @@ const App = () => {
     const createTrip = (createdTrip) => {
         console.log(createdTrip);
     }
-
+    const updateTrip = (updatedTrip) => {
+        console.log(updatedTrip);
+    }
+    const deleteTrip = (deleteTrip) => {
+        console.log(deleteTrip);
+    }
     const url = "http://localhost:3000";
 
     return (
@@ -32,18 +37,18 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/AboutUs" element={<AboutUs />} />
-                <Route path="/TravelLogueIndex" element={<TravelLogueIndex />} />
-                <Route path="/TravelLogueShow" element={<TravelLogueShow />} />
+                <Route path="/TravelLogueIndex" element={<TravelLogueIndex trips={trips}/>} />
+                <Route path="/TravelLogueShow/:id" element={<TravelLogueShow trips={trips}/>} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/TravelLogueProtectedIndex" element={<TravelLogueProtectedIndex />} />
                 <Route path="/TravelLogueNew" element={<TravelLogueNew createTrip={createTrip} />} />
-                <Route path="/TravelLogueEdit" element={<TravelLogueEdit />} />
+                <Route path="/TravelLogueEdit/:id" element={<TravelLogueEdit updateTrip={updateTrip} deleteTrip={deleteTrip} />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
         </div>
-    );
+    )
 }
 
 export default App;
