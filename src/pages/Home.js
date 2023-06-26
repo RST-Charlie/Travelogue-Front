@@ -1,18 +1,29 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import "../Styles/Home.css"
+import Plane from "../assets/planebanner.png"
+import 'animate.css';
 
 const Home = () => {
-    const navigate = useNavigate();
-
-    const handleLogout = () => {
-
-        navigate('/login');
-    };
 
     return (
         <>
-            <h1>This is the Homepage</h1>
-            <button onClick={handleLogout}>Logout</button>
+            <div className="home">
+                <div className='logo-mission'>
+                    <p className='animate__animated animate__slideInUp title' >
+                        Travelogue
+                    </p>
+                    <p  className="animate__animated animate__slideInUp mission" >
+                        Track your globetrotting adventures and conquer the
+                    <br />
+                        world, one destination at a time.
+                    </p>
+                </div>
+                <img 
+                    src={Plane} 
+                    className="move-image" 
+                    alt="Plane Banner"
+                />
+            </div>
         </>
     );
 };
