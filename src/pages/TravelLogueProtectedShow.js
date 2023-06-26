@@ -19,7 +19,7 @@ const TravelLogueProtectedShow = ({trips}) => {
                     Travelogue: 
                 </h1>
                 <h1>
-                {currentTrip.title}
+                    {currentTrip.title}
                 </h1>
             </Container>
             <main

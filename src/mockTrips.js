@@ -1,9 +1,8 @@
-
-import ani from './assets/turkey.jpg';
-import sunset from './assets/sunset.jpg';
-import austrailia from './assets/austrailia.jpeg';
-import istockphoto from './assets/istockphoto-147049964-612x612.jpg';
-import hawaii from './assets/hawaii.webp';
+import ani from "./assets/ani.jpeg"
+import ob from "./assets/sandy_eggos.jpeg"
+import aussie from "./assets/not_quite_australia.jpeg"
+import bahamas from "./assets/not_quite_bahamian.jpeg"
+import hi from "./assets/not_quite_hawaii.jpeg"
 
 let mockTrips = [
     {
@@ -13,10 +12,10 @@ let mockTrips = [
         photo: ani,
         start_date: "2021-08-01",
         end_date: "2021-08-20",
-        city: "ani",
+        city: "Ani",
         state: "Kars",
-        country: "Turkey",
-        region: "Asia",
+        country: "Turkiye",
+        region: "West Asia",
         international: true,
         user_id: 4
     },
@@ -24,7 +23,7 @@ let mockTrips = [
         id: 2,
         title: "OB sunny days and hilly walks",
         entry: "Great to visit the fam and hit the beaches! Leo loved playing with Lizzi at dog beach.",
-        photo: sunset,
+        photo: ob,
         start_date: "2022-04-20",
         end_date: "2022-05-25",
         city: "San Diego",
@@ -38,13 +37,13 @@ let mockTrips = [
         id: 3,
         title: "So lit",
         entry: "It was an interesting time",
-        photo: austrailia,
+        photo: aussie,
         start_date: "2019-01-10",
         end_date: "2019-01-17",
         city: "Brisbane",
         state: "",
         country: "Australia",
-        region: "OCeania",
+        region: "Oceania",
         international: true,
         user_id: 3
     },
@@ -52,7 +51,7 @@ let mockTrips = [
         id: 4,
         title: "fun, hot, and exciting",
         entry: "This was my favorite trip! Years and years and years ago",
-        photo: istockphoto,
+        photo: bahamas,
         start_date: "2002-06-05",
         end_date: "2002-06-10",
         city: "",
@@ -66,10 +65,10 @@ let mockTrips = [
         id: 5,
         title: "peaceful easy feeling",
         entry: "Hawaii was gorgeous! The beaches, mountains, forests...such a magical place",
-        photo: hawaii,
+        photo: hi,
         start_date: "2023-12-23",
         end_date: "2023-12-30",
-        city: "Kawaii",
+        city: "Kauai",
         state: "Hawaii",
         country: "United States",
         region: "Oceania",
