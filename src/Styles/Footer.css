@@ -2,12 +2,11 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-  }
+}
   
-  .footer {
+.footer {
     position: fixed;
     bottom: 0;
-    left:12%;
     bottom: 1%;
     transform: translateX(-50%);
     font-size: 1.6vw;
@@ -20,4 +19,4 @@ html, body {
     border-radius: 20vw;
     color: whitesmoke;
     margin-left: 5%;
-  }
+}
