@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
 import '../App.css';
 import React from "react"
-import { Card, CardImg, CardBody, CardText, CardTitle, CardSubtitle, Button, CardFooter } from "reactstrap"
+import { Card, CardImg, CardBody, CardText, CardTitle, CardSubtitle, Button, CardFooter, Container } from "reactstrap"
 
 const TravelLogueShow = ({trips}) => {
     const { id } = useParams()
@@ -49,15 +49,15 @@ const TravelLogueShow = ({trips}) => {
                                     {currentTrip.entry}
                                 </CardText>
                             </CardBody>
-                            <CardFooter>
+                            <Container>
                                 <Button 
                                     color="primary"
-                                    className="float-right"
+                                    className="align-items-center"
                                     disabled
                                 >
                                     Edit
                                 </Button>
-                            </CardFooter>
+                            </Container>
                         </Card>
                     </>
                 )}

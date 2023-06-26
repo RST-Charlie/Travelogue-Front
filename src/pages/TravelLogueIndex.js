@@ -1,5 +1,5 @@
 import React from "react"
-import css from "../Styles/DemoIndex.css"
+import css from "../StyIndex.css"
 import { Card, CardBody, CardTitle, CardSubtitle, Button, Container, CardImg } from "reactstrap"
 
 const TravelLogueIndex = ({trips}) => {
@@ -59,7 +59,7 @@ const TravelLogueIndex = ({trips}) => {
                                 <Button 
                                     className="btn-details mt-3 text-center" // d-flex mx-5 justify-content-space-between align-items-center text-center" 
                                     color="info"
-                                    
+                                    href={`/TravelLogueShow/${trip.id}`}
                                 >   
                                     See travelogue
                                 </Button>
