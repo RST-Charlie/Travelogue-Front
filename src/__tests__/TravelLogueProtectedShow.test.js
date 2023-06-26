@@ -1,4 +1,4 @@
-import React from 'react' 
+import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
 import { BrowserRouter, MemoryRouter, Routes, Route } from 'react-router-dom';
 import TravelLogueProtectedShow from '../pages/TravelLogueProtectedShow';
@@ -10,13 +10,21 @@ describe('<TravelLogueProtectedShow />', () => {
         render(
             <MemoryRouter initialEntries={["/TravelLogueProtectedShow/1"]}>
                 <Routes>
-                    <Route path="/TravelLogueShow/:id" element={<TravelLogueProtectedShow trips={mockTrips} />} />
+                    <Route path="/TravelLogueProtectedShow/:id" element={<TravelLogueProtectedShow trips={mockTrips} />} />
                 </Routes>
             </MemoryRouter>
         );
     });
 
-    it('displays to a user a saved trip', () => {
-        expect(screen.getByText(/Travelogue:/i)).toBeInTheDocument()
-    })
+    it('displays Edit travelogue', () => {
+        expect(screen.getByText((content, element) => {
+            const hasText = (node) => node.textContent === 'Travelogue:';
+            const elementHasText = hasText(element);
+            const childrenDontHaveText = Array.from(element.children).every(
+                (child) => !hasText(child)
+            );
+
+            return elementHasText && childrenDontHaveText;
+        })).toBeInTheDocument();
+    });
 });
