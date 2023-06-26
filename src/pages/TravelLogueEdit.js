@@ -130,7 +130,7 @@ const TravelLogueEdit = ({ trip, updateTrip, deleteTrip }) => {
                                 className='text-secondary'
                                 onChange={handleChange}
                                 value={editTrip.region}>
-                            {regions}
+                                {regions}
                             </Input>
                         </FormGroup>
                     </Col>
