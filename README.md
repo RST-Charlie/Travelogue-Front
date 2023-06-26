@@ -10,15 +10,24 @@ User will be able to create a account and manage experiences by entering data in
 
 Dependencies:
 
-For the Front End (you will need to use yarn in your terminal to add dependencies):
+For the Front End (you will need to use yarn in your terminal to add dependencies), you can check your package.json file and ensure the proper dependencies have been installed:
 
 1.  Add react-router
 
  yarn add react-router
+ 
+ import { Routes, Route } from 'react-router-dom' and'
+ import { BrowserRouter } from 'react-router-dom' on components pages
+ in App.test.js make sure you import import { render, screen } from '@testing-library/react'
+ <BrowserRouter>
+    <App />
+ </BrowserRouter>
 
  2.  Add react testing library
 
  yarn add react-testing-library
+
+ import import { render } from '@testing-library/react' in testing files
 
  3.  Add react-strap
 
@@ -34,21 +43,27 @@ For the Front End (you will need to use yarn in your terminal to add dependencie
 
  Add testing suites
 
- 6.  Add react testing library
-
- yarn add react-testing-library
-
- 7.  Add jest
+ 6.  Add jest
 
  yarn add jest
 
- 8.  STRETCH Add redux
+ 7.  Add Animate CSS
+ 
+ yarn add animate.css
+
+ import 'animate.css' 
+  
+After installing Animate.css, add the class animate__animated to an element, along with any of the animation names (don't forget the animate__ prefix!):
+
+ 9.  STRETCH Add redux
 
  yarn add redux
 
- 9.  STRETCH Add redux toolkit
+ 10.  STRETCH Add redux toolkit
 
  yarn add redux-toolkit
+
+ 
 
 
 Backend
