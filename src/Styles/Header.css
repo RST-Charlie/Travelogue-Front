@@ -11,13 +11,20 @@
     color:whitesmoke !important;
 }
 
+.Navbar a.nav-link:hover,
+.Navbar a.nav-link:focus,
+.Navbar a.navbar-brand:hover,
+.Navbar a.navbar-brand:focus  {
+  color: #ff914d;
+}
+
 .Navbar {
     background-color:#5e17eb;
 }
 
 a.nav-link{
     color:whitesmoke;
-    font-size: x-large;
+    font-size: xx-large;
 }
 
 a.navbar-brand{

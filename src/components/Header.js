@@ -17,21 +17,18 @@ const Header = () => {
                         width: 40
                     }}
                     />
-                    Travelogue
+                    RSTech
                 </NavbarBrand>
-            <div className="Links">
-                <Nav className="nav justify-content-end">
-                    <NavItem>
-                        <NavLink href="/">Home</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/login">Log In</NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink href="/AboutUs">Contact</NavLink>
-                    </NavItem>
-                </Nav>
-            </div>
+                <div className="Links">
+                    <Nav className="nav justify-content-end">
+                        <NavItem>
+                            <NavLink href="/login">Log In</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink href="/AboutUs">Contact</NavLink>
+                        </NavItem>
+                    </Nav>
+                </div>
         </Navbar>
         </>
 
