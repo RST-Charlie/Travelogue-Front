@@ -10,6 +10,7 @@ import TravelLogueEdit from './pages/TravelLogueEdit';
 import TravelLogueIndex from './pages/TravelLogueIndex';
 import TravelLogueNew from './pages/TravelLogueNew';
 import TravelLogueProtectedIndex from './pages/TravelLogueProtectedIndex';
+import TravelLogueProtectedShow from './pages/TravelLogueProtectedShow';
 import TravelLogueShow from './pages/TravelLogueShow';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -41,7 +42,12 @@ const App = () => {
                 <Route path="/TravelLogueShow/:id" element={<TravelLogueShow trips={trips}/>} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/signup" element={<SignUp />} />
-                <Route path="/TravelLogueProtectedIndex" element={<TravelLogueProtectedIndex currentUser={currentUser} trips={trips} />} />
+                {currentUser && (
+                    <>
+                        <Route path="/TravelLogueProtectedIndex" element={<TravelLogueProtectedIndex currentUser={currentUser} trips={trips} />} />
+                        <Route path="/TravelLogueProtectedShow/:id" element={<TravelLogueProtectedShow currentUser={currentUser} trips={trips} />} />
+                    </>
+                )}
                 <Route path="/TravelLogueNew" element={<TravelLogueNew createTrip={createTrip} />} />
                 <Route path="/TravelLogueEdit/:id" element={<TravelLogueEdit updateTrip={updateTrip} deleteTrip={deleteTrip} />} />
                 <Route path="*" element={<NotFound />} />
