@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom';
-import '../App.css';
+import '../Styles/Index.css';
 import React from "react"
-import { Card, CardImg, CardBody, CardText, CardTitle, CardSubtitle, Button, CardFooter, Container } from "reactstrap"
+import { Card, CardImg, CardBody, CardText, CardSubtitle, Button, Container } from "reactstrap"
 
 const TravelLogueShow = ({trips}) => {
     const { id } = useParams()
@@ -9,8 +9,19 @@ const TravelLogueShow = ({trips}) => {
 
     return (
         <>
-            <br />
-            <h1 style={{color:"white"}}>Travelogue: Trip entry</h1>
+            <Container
+                className='
+                    text-center
+                    text-white
+                    mx-auto mt-5'
+            >
+                <h1>
+                    Travelogue: 
+                </h1>
+                <h1>
+                {currentTrip.title}
+                </h1>
+            </Container>
             <main
                 className='mx-auto my-5'
                 style={{ 
@@ -23,46 +34,61 @@ const TravelLogueShow = ({trips}) => {
                 {currentTrip && (
                     <>
                         <CardImg
-                        alt="Photo from trip"
-                        src={currentTrip.photo}
-                        style={{ width:"50vw"}}
+                            alt="Photo from trip"
+                            src={currentTrip.photo}
+                            style={{ width:"80vw", objectFit: "contain"}}
                         />
-                        <Card>
+                        <Card
+                            style={{ width:"80vw" }}
+                        >
                             <CardBody>
-                                <CardTitle tag="h3">
-                                    {currentTrip.title}
-                                </CardTitle>
                                 <CardSubtitle
                                     className="mb-text-muted"
                                     tag="h5"
                                 >
                                     {currentTrip.city}, {currentTrip.state}
+                                    <br />
                                     {currentTrip.country}, {currentTrip.region}
                                 </CardSubtitle>
+
                                 <CardSubtitle
-                                    className="mb-2 text-muted"
+                                    className="mb-2 text-muted mt-2"
                                     tag="h5"
                                 >
-                                    arrived {currentTrip.start_date},  left  {currentTrip.end_date}
+                                    Arrived: {currentTrip.start_date}
+                                    <br />
+                                    Departed:  {currentTrip.end_date}
                                 </CardSubtitle>
+                                
                                 <CardText>
                                     {currentTrip.entry}
                                 </CardText>
                             </CardBody>
-                            <Container>
+                            <div 
+                                className="
+                                    justify-content-between
+                                    align-items-center
+                                    text-center"
+                            >
                                 <Button 
-                                    color="primary"
-                                    className="align-items-center"
+                                    className="
+                                        btn-details 
+                                        my-3 
+                                        text-center"
+                                    color='secondary'
                                     disabled
-                                >
-                                    Edit
+                                >   
+                                    Edit travelogue
                                 </Button>
-                            </Container>
+                            </div>
                         </Card>
                     </>
                 )}
             </main>
+            <br />
+            <br />
         </>
     )
 }
+
 export default TravelLogueShow;

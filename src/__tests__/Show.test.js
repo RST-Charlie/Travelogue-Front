@@ -17,6 +17,6 @@ describe('<TravelLogueShow />', () => {
     });
 
     it('displays to a user a saved trip', () => {
-        expect(screen.getByText(/Travelogue: Trip entry/i)).toBeInTheDocument()
+        expect(screen.getByText(/Travelogue:/i)).toBeInTheDocument()
     })
 });

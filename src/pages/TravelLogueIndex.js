@@ -1,5 +1,5 @@
 import React from "react"
-import css from "../StyIndex.css"
+import '../Styles/Index.css'
 import { Card, CardBody, CardTitle, CardSubtitle, Button, Container, CardImg } from "reactstrap"
 
 const TravelLogueIndex = ({trips}) => {
@@ -57,7 +57,7 @@ const TravelLogueIndex = ({trips}) => {
                                     align-items-center
                                     text-center">
                                 <Button 
-                                    className="btn-details mt-3 text-center" // d-flex mx-5 justify-content-space-between align-items-center text-center" 
+                                    className="btn-details mt-3 text-center"
                                     color="info"
                                     href={`/TravelLogueShow/${trip.id}`}
                                 >   
@@ -71,5 +71,5 @@ const TravelLogueIndex = ({trips}) => {
         </Container> 
     )
 }
-// Create an account and get started today! 
+
 export default TravelLogueIndex;
