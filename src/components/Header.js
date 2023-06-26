@@ -10,26 +10,30 @@ const Header = () => {
             <Navbar className="Navbar">
                 <NavbarBrand href="/">
                     <img
-                    alt="logo"
-                    src={Airplane}
-                    style={{
-                        height: 40,
-                        width: 40
-                    }}
+                        alt="logo"
+                        src={Airplane}
+                        style={{
+                            height: 40,
+                            width: 40
+                        }}
                     />
                     RSTech
                 </NavbarBrand>
                 <div className="Links">
                     <Nav className="nav justify-content-end">
                         <NavItem>
-                            <NavLink href="/login">Log In</NavLink>
+                            <NavLink href="/login">
+                                Log In
+                            </NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="/AboutUs">Contact</NavLink>
+                            <NavLink href="/AboutUs">
+                                Contact
+                            </NavLink>
                         </NavItem>
                     </Nav>
                 </div>
-        </Navbar>
+            </Navbar>
         </>
 
     );

@@ -5,7 +5,7 @@
 .Links {
     justify-content: flex-end;
     color:white;
-  }
+}
 
 .NavLink {
     color:whitesmoke !important;
@@ -15,7 +15,7 @@
 .Navbar a.nav-link:focus,
 .Navbar a.navbar-brand:hover,
 .Navbar a.navbar-brand:focus  {
-  color: #ff914d;
+    color: #ff914d;
 }
 
 .Navbar {

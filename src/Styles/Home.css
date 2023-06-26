@@ -21,25 +21,25 @@
 
 @keyframes moveImage {
     0% {
-      transform: translateX(0) translateY(0);
+        transform: translateX(0) translateY(0);
     }
     25% {
-      transform: translateX(30%) translateY(-20%);
+        transform: translateX(30%) translateY(-20%);
     }
     50% {
-      transform: translateX(0) translateY(0);
+        transform: translateX(0) translateY(0);
     }
     75% {
-      transform: translateX(30%) translateY(-20%);
+        transform: translateX(30%) translateY(-20%);
     }
     100% {
-      transform: translateX(0) translateY(0);
+        transform: translateX(0) translateY(0);
     }
-  }
+}
   
-  .move-image {
+.move-image {
     animation: moveImage 30s linear infinite;
     height: 50vw;
     padding-top: 20vh;
-  }
+}
   
