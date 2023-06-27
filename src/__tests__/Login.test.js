@@ -16,5 +16,18 @@ describe('<Login />', () => {
         const emailLabel = screen.getByText(/email/i);
         expect(emailLabel).toBeInTheDocument();
     });
+
+    it('renders the login form', () => {
+        const emailInput = screen.getByLabelText(/email/i);
+        const passwordInput = screen.getByLabelText(/password/i);
+        const loginButton = screen.getByRole('button', { name: /login/i });
+
+        expect(emailInput).toBeInTheDocument();
+        expect(passwordInput).toBeInTheDocument();
+        expect(loginButton).toBeInTheDocument();
+    });
 });
+
+
+
 

@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import "../Styles/SignUp.css";
+import "animate.css";
 
 const SignUp = () => {
     const formRef = useRef();
@@ -12,33 +14,76 @@ const SignUp = () => {
         const userInfo = {
             user: { email: data.email, password: data.password },
         };
-      
+
         console.log(userInfo);
         navigate("/");
-        e.target.reset();
+        formRef.current.reset(); 
     };
 
     return (
         <>
-            <div id="signup" data-testid="signup-component"> 
-                <form ref={formRef} onSubmit={handleSubmit}>
-                    Email: <input type="email" name="email" placeholder="email" />
+            <div 
+                className="
+                    signup-statement 
+                    animate__animated 
+                    animate__fadeInLeft"
+            >
+                <p className="banner">
+                    Embark on new adventures
+                </p>
+                <p className="statement">
+                    Start logging with us
+                </p>
+            </div>
+            <div 
+                className="animate__animated animate__slideInUp signup" 
+                data-testid="signup-component"
+            >
+                <p className="title">
+                    Sign Up
+                </p>
+                <form 
+                    ref={formRef} 
+                    onSubmit={handleSubmit}
+                >
+                    <label>
+                        Email:
+                        <input 
+                            type="email" 
+                            name="email" 
+                            placeholder="Email" 
+                        />
+                    </label>
+                    <label>
+                        Password:
+                        <input 
+                            type="password" 
+                            name="password" 
+                            placeholder="Password" 
+                        />
+                    </label>
+                    <label>
+                        Confirm Password:
+                        <input 
+                            type="password" 
+                            name="password_confirmation" 
+                            placeholder="Confirm Password" 
+                        />
+                    </label>
                     <br />
-                    Password:{" "}
-                    <input type="password" name="password" placeholder="password" />
-                    <br />
-                    Confirm Password:{" "}
-                    <input
-                        type="password"
-                        name="password_confirmation"
-                        placeholder="confirm password"
+                    <input 
+                        type="submit" 
+                        value="Submit" 
+                        className="submit" 
                     />
-                    <br />
-                    <input type="submit" value="Submit" />
                 </form>
                 <br />
-                <div>
-                    Already registered? <a href="/login">Login</a> here.
+                <div className="login-link">
+                    Already registered? 
+                    <a href="/login">
+                        Login
+                    </a> 
+                    here.
                 </div>
             </div>
         </>
@@ -46,3 +91,5 @@ const SignUp = () => {
 };
 
 export default SignUp;
+
+
