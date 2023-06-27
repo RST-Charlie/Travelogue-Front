@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+
 const Login = ({ login }) => {
     const formRef = useRef();
     const navigate = useNavigate();
@@ -21,17 +22,17 @@ const Login = ({ login }) => {
         e.preventDefault();
         const formData = new FormData(formRef.current);
         const data = Object.fromEntries(formData);
-        const userInfo = {
+        const {useRef} = {
             user: { email: data.email, password: data.password },
         };
-        console.log(userInfo);
+        login({useRef});
         handleLogin();
         e.target.reset();
     };
 
     return (
         <div id="login">
-            <h1>Sign In</h1>
+            <h1>Log In</h1>
             {!loggedIn ? (
                 <form ref={formRef} onSubmit={handleSubmit}>
                     Email: <input type="email" name="email" placeholder="email" />

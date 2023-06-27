@@ -37,7 +37,7 @@ const TravelLogueNew = ({ createTrip }) => {
             newTrip.region !== ""
             ) {
             createTrip(newTrip)
-            window.location.href="/TravelLogueIndex"
+            window.location.href=`/trips/${newTrip.id}`
         }
         else {
             setError(true)

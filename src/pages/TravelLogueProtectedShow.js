@@ -76,7 +76,7 @@ const TravelLogueProtectedShow = ({trips}) => {
                                         my-3 
                                         text-center"
                                     color='secondary'
-                                    href={`/TravelLogueEdit/${currentTrip.id}`}
+                                    href={`/trips/${currentTrip.id}/edit`}
                                 >   
                                     Edit travelogue
                                 </Button>

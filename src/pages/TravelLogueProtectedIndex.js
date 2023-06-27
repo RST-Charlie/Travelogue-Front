@@ -65,7 +65,7 @@ const TravelLogueProtectedIndex = ({ currentUser, trips }) => {
                                 <Button 
                                     className="btn-details mt-3 text-center" 
                                     color="info"
-                                    href={`/TravelLogueProtectedShow/${trip.id}`}
+                                    href={`/trips/${trip.id}`}
                                 >   
                                     See travelogue
                                 </Button>

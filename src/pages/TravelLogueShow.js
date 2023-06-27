@@ -3,6 +3,7 @@ import '../Styles/Index.css';
 import React from "react"
 import { Card, CardImg, CardBody, CardText, CardSubtitle, Button, Container } from "reactstrap"
 
+
 const TravelLogueShow = ({trips}) => {
     const { id } = useParams()
     let currentTrip = trips?.find((trip) => trip.id === +id)

@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
-const SignUp = () => {
+const SignUp = ({ signup }) => {
     const formRef = useRef();
     const navigate = useNavigate();
 
@@ -9,36 +9,52 @@ const SignUp = () => {
         e.preventDefault();
         const formData = new FormData(formRef.current);
         const data = Object.fromEntries(formData);
-        const userInfo = {
-            user: { email: data.email, password: data.password },
+        const {useRef} = {
+            "user": { email: data.email, password: data.password },
         };
       
-        console.log(userInfo);
-        navigate("/");
+        signup({useRef});
+        navigate("/login");
         e.target.reset();
     };
 
     return (
         <>
-            <div id="signup" data-testid="signup-component"> 
+            <div> 
+            <h1>Sign Up</h1>
+
                 <form ref={formRef} onSubmit={handleSubmit}>
-                    Email: <input type="email" name="email" placeholder="email" />
+                    Email: <input 
+                        type="email" 
+                        name="email" 
+                        placeholder="email" 
+                    />
                     <br />
-                    Password:{" "}
-                    <input type="password" name="password" placeholder="password" />
+                    Password:
+                    <input 
+                        type="password" 
+                        name="password" 
+                        placeholder="password" 
+                    />
                     <br />
-                    Confirm Password:{" "}
+                    Confirm Password:
                     <input
                         type="password"
                         name="password_confirmation"
                         placeholder="confirm password"
                     />
                     <br />
-                    <input type="submit" value="Submit" />
+                    <input 
+                        type="submit" 
+                        value="Submit" 
+                    />
                 </form>
                 <br />
                 <div>
-                    Already registered? <a href="/login">Login</a> here.
+                    Already registered?
+                    <a href="/login">
+                        Login
+                    </a> here.
                 </div>
             </div>
         </>

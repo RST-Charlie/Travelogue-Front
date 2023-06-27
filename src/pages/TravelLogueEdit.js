@@ -1,16 +1,10 @@
 import React, { useState } from 'react';
 import { Form, FormGroup, Label, Input, Button, Row, Col } from "reactstrap"
-import { useParams, useNavigate } from 'react-router-dom';
 import '../Styles/TravelLogueEdit.css';
-import mockUsers from '../mockUsers'
-import mockTrips from '../mockTrips'
 import countries from '../components/Countries'
 import regions from '../components/Regions'
 
-const TravelLogueEdit = ({ trip, updateTrip, deleteTrip }) => {
-    const [currentUser, setCurrentUser] = useState(mockUsers[0]);
-    const [trips, setTrips] = useState(mockTrips);
-    
+const TravelLogueEdit = ({ trip, updateTrip, deleteTrip }) => {    
     const [editTrip, setEditTrip] = useState({ ...trip });
   
     const handleChange = (e) => {
@@ -19,11 +13,12 @@ const TravelLogueEdit = ({ trip, updateTrip, deleteTrip }) => {
   
     const handleClick = () => {
         updateTrip(editTrip);
-        window.location.href="/TravelLogueIndex"
+        window.location.href=`/trips/${editTrip.id}`
     };
   
     const handleDelete = () => {
-        deleteTrip(editTrip.id); 
+        deleteTrip(editTrip.id)
+        window.location.href=`/trips/`
     };
   
      
