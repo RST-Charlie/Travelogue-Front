@@ -85,5 +85,6 @@ input[type="submit"] {
 .submit{
     font-size:2vw;
     border-radius: 25px;
+    width: fit-content;
 }
   
