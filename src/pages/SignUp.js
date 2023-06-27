@@ -39,7 +39,7 @@ const SignUp = () => {
                 className="animate__animated animate__slideInUp signup" 
                 data-testid="signup-component"
             >
-                <p className="title">
+                <p className="signup-title">
                     Sign Up
                 </p>
                 <form 
