@@ -3,6 +3,7 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import SignUp from "../pages/SignUp";
 
+
 describe("SignUp", () => {
     it("renders the SignUp component", () => {
         render(
@@ -31,9 +32,10 @@ describe("SignUp", () => {
                 <SignUp />
             </MemoryRouter>
         );
-        fireEvent.submit(screen.getByRole("button", { name: "Submit" }));
+        fireEvent.submit(screen.getByRole('button',  { name: "Submit" }));
+        expect(screen.getByText(/Email:/i)).toBeInTheDocument()
     });
-
+    
     it("navigates to the login page", () => {
         render(
             <MemoryRouter>
@@ -41,6 +43,7 @@ describe("SignUp", () => {
             </MemoryRouter>
         );
         fireEvent.click(screen.getByText("Login"));
+        expect(screen.getByLabelText(/Confirm Password:/i)).toBeInTheDocument()
     });
 });
 
