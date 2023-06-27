@@ -22,31 +22,68 @@ const SignUp = () => {
 
     return (
         <>
-            <div className="signup-statement animate__animated animate__fadeInLeft">
-                <p className="banner">Embark on new adventures</p>
-                <p className="statement">Start logging with us</p>
+            <div 
+                className="
+                    signup-statement 
+                    animate__animated 
+                    animate__fadeInLeft"
+            >
+                <p className="banner">
+                    Embark on new adventures
+                </p>
+                <p className="statement">
+                    Start logging with us
+                </p>
             </div>
-            <div className="animate__animated animate__slideInUp signup" data-testid="signup-component">
-                <p className="title">Sign Up</p>
-                <form ref={formRef} onSubmit={handleSubmit}>
+            <div 
+                className="animate__animated animate__slideInUp signup" 
+                data-testid="signup-component"
+            >
+                <p className="title">
+                    Sign Up
+                </p>
+                <form 
+                    ref={formRef} 
+                    onSubmit={handleSubmit}
+                >
                     <label>
                         Email:
-                        <input type="email" name="email" placeholder="Email" />
+                        <input 
+                            type="email" 
+                            name="email" 
+                            placeholder="Email" 
+                        />
                     </label>
                     <label>
                         Password:
-                        <input type="password" name="password" placeholder="Password" />
+                        <input 
+                            type="password" 
+                            name="password" 
+                            placeholder="Password" 
+                        />
                     </label>
                     <label>
                         Confirm Password:
-                        <input type="password" name="password_confirmation" placeholder="Confirm Password" />
+                        <input 
+                            type="password" 
+                            name="password_confirmation" 
+                            placeholder="Confirm Password" 
+                        />
                     </label>
                     <br />
-                    <input type="submit" value="Submit" className="submit" />
+                    <input 
+                        type="submit" 
+                        value="Submit" 
+                        className="submit" 
+                    />
                 </form>
                 <br />
                 <div className="login-link">
-                    Already registered? <a href="/login">Login</a> here.
+                    Already registered? 
+                    <a href="/login">
+                        Login
+                    </a> 
+                    here.
                 </div>
             </div>
         </>
