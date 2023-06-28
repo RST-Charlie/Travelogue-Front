@@ -81,6 +81,26 @@ const TravelLogueShow = ({trips}) => {
                                 >   
                                     Edit travelogue
                                 </Button>
+                                <Button 
+                                    className="
+                                        btn-details 
+                                        my-3 
+                                        text-center"
+                                    color='secondary'
+                                    disabled
+                                >   
+                                    Delete travelogue
+                                </Button>
+                                <Button 
+                                    className="
+                                        btn-details 
+                                        my-3 
+                                        text-center"
+                                    color='secondary'
+                                    href={`/demotrips`}
+                                >   
+                                    Back to all
+                                </Button>
                             </div>
                         </Card>
                     </>

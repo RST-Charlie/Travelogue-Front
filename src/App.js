@@ -17,18 +17,22 @@ import Footer from './components/Footer';
 import mockTrips from './mockTrips';
 
 const App = () => {
+
     const [currentUser, setCurrentUser] = useState([null]);
     const [trips, setTrips] = useState([])
-      
+    
+    const url = "http://localhost:3000";
+
     useEffect(() => {
         const loggedInUser = localStorage.getItem("token")
+        
         if (loggedInUser) {
-            setCurrentUser(loggedInUser)
+            const authUserId = +JSON.parse(atob(loggedInUser?.split(".")[1])).sub
+            setCurrentUser({ id: authUserId })
         }
         readTrip()
     }, [])
 
-    const url = "http://localhost:3000";
     
     const readTrip = () => {
         fetch(`${url}/trips`)
@@ -54,13 +58,13 @@ const App = () => {
     
     
     const updateTrip = (updatedTrip, id) => {
-    fetch(`${url}/trips/${id}/edit`, {
-        body: JSON.stringify(updatedTrip),
-        headers: {
-            "Content-Type": "application/json"
-        },
-        method: "PATCH"
-    })
+        fetch(`${url}/trips/${id}`, {
+            body: JSON.stringify(updatedTrip),
+            headers: {
+                "Content-Type": "application/json"
+            },
+            method: "PATCH"
+        })
         .then((response) => response.json())
         .then((payload) => readTrip())
         .catch((errors) => console.log("Trip update errors:", errors))
@@ -78,9 +82,10 @@ const App = () => {
             .catch((errors) => console.log("delete errors:", errors))
     }
 
-    const login = ({useRef}) => {
+    const login = (userInfo) => {
+        console.log("Login user info on App.js:", userInfo);
         fetch(`${url}/login`, {
-            body: JSON.stringify(useRef),
+            body: JSON.stringify(userInfo),
             headers: {
                 "Content-Type": "application/json",
                 "Accept": "application/json"
@@ -100,9 +105,9 @@ const App = () => {
         .catch(error => console.log("login errors: ", error))
     }
   
-    const signup = ({useRef}) => {
+    const signup = (userInfo) => {
         fetch(`${url}/signup`, {
-        body: JSON.stringify(useRef),
+        body: JSON.stringify(userInfo),
         headers: {
             "Content-Type": "application/json",
             "Accept": "application/json"
@@ -112,9 +117,9 @@ const App = () => {
         .then(response => {
             if (!response.ok) {
             throw Error(response.statusText)
-        }
-        localStorage.setItem("token", response.headers.get("Authorization"))
-        return response.json()
+            }
+            localStorage.setItem("token", response.headers.get("Authorization"))
+            return response.json()
         })
         .then(payload => {
         setCurrentUser(payload)
@@ -124,15 +129,15 @@ const App = () => {
   
     const logout = () => {
         fetch(`${url}/logout`, {
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": localStorage.getItem("token")
-        },
-        method: "DELETE"
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": localStorage.getItem("token")
+            },
+            method: "DELETE"
         })
         .then(payload => {
-        localStorage.removeItem("token")
-        setCurrentUser(null)
+            localStorage.removeItem("token")
+            setCurrentUser(null)
         })
         .catch(error => console.log("log out errors: ", error))
     }
@@ -141,22 +146,52 @@ const App = () => {
 
     return (
         <div className="App">
-            <Header current_user={currentUser} logout={logout}/>
+            <Header currentUser={currentUser} logout={logout}/>
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/meetRST" element={<AboutUs />} />
-                <Route path="/trips" element={<TravelLogueIndex trips={mockTrips}/>} />
-                <Route path="/trips/:id" element={<TravelLogueShow trips={mockTrips}/>} />
-                <Route path="/login" element={<Login login={login}/>} />
-                <Route path="/signup" element={<SignUp signup={signup}/>} />
+                <Route 
+                    path="/" 
+                    element={<Home />} 
+                />
+                <Route 
+                    path="/meetRST" 
+                    element={<AboutUs />} 
+                />
+                <Route 
+                    path="/demotrips" 
+                    element={<TravelLogueIndex trips={mockTrips}/>} 
+                />
+                <Route 
+                    path="/demotrips/:id" 
+                    element={<TravelLogueShow trips={mockTrips}/>} 
+                />
+                <Route 
+                    path="/login" 
+                    element={<Login login={login}/>} 
+                />
+                <Route 
+                    path="/signup" 
+                    element={<SignUp signup={signup}/>} 
+                />
                 {currentUser && (
                     <>
-                        <Route path="/trips" element={<TravelLogueProtectedIndex currentUser={currentUser} trips={trips} />} />
-                        <Route path="/trips/:id" element={<TravelLogueProtectedShow currentUser={currentUser} trips={trips} />} />
+                        <Route 
+                            path="/mytrips" 
+                            element={<TravelLogueProtectedIndex currentUser={currentUser} trips={trips} />} 
+                        />
+                        <Route 
+                            path="/mytrips/:id" 
+                            element={<TravelLogueProtectedShow currentUser={currentUser} trips={trips} />} 
+                        />
+                        <Route 
+                            path="/addtrip" 
+                            element={<TravelLogueNew currentUser={currentUser} createTrip={createTrip} />} 
+                        />
+                        <Route 
+                            path="/changetrips/:id" 
+                            element={<TravelLogueEdit trips={trips} updateTrip={updateTrip} deleteTrip={deleteTrip} currentUser={currentUser} />} 
+                        />
                     </>
                 )}
-                <Route path="/trips" element={<TravelLogueNew createTrip={createTrip} />} />
-                <Route path="/trips/:id/edit" element={<TravelLogueEdit updateTrip={updateTrip} deleteTrip={deleteTrip} />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />

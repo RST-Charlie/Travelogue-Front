@@ -9,12 +9,12 @@ const SignUp = ({ signup }) => {
         e.preventDefault();
         const formData = new FormData(formRef.current);
         const data = Object.fromEntries(formData);
-        const {useRef} = {
-            "user": { email: data.email, password: data.password },
+        const userInfo = {
+            "user":{ email: data.email, password: data.password },
         };
       
-        signup({useRef});
-        navigate("/login");
+        signup(userInfo);
+        navigate("/");
         e.target.reset();
     };
 
