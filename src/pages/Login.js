@@ -6,6 +6,12 @@ import "animate.css";
 const Login = ({ login }) => {
     const formRef = useRef();
     const navigate = useNavigate();
+    const [loggedIn, setLoggedIn] = useState(false);
+    
+
+    const handleLogout = () => {
+        setLoggedIn(false);
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -21,11 +27,22 @@ const Login = ({ login }) => {
 
     return (
         <>
-            <div id="login" className="login-container animate__animated animate__slideInUp">>
+            <div id="login" 
+                className="
+                    login-container 
+                    animate__animated 
+                    animate__slideInUp"
+            >
                 <p className="login-banner animate__animated animate__fadeInLeft">
                     See your adventures
                 </p>
-            <div id="login" className="login-container animate__animated animate__slideInUp">
+            </div>
+            <div id="login" 
+                className="
+                    login-container 
+                    animate__animated 
+                    animate__slideInUp"
+            >
                 {!loggedIn ? (
                     <form ref={formRef} onSubmit={handleSubmit}>
                         <label>
@@ -73,4 +90,4 @@ const Login = ({ login }) => {
     );
 };
 
-export default Login;
+export default Login
