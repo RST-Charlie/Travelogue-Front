@@ -7,7 +7,7 @@ const TravelLogueProtectedShow = ({ currentUser, trips}) => {
     const { id } = useParams()
     const myTrips = trips?.filter(trip => currentUser?.id === trip.user_id)
     let currentTrip = myTrips?.find((trip) => trip.id === +id)
-console.log(currentTrip);
+
     return (
         <>
             <Container

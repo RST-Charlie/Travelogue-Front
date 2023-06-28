@@ -8,7 +8,6 @@ import { useParams, useNavigate } from "react-router-dom"
 
 const TravelLogueEdit = ({ trips, updateTrip, deleteTrip, currentUser }) => {   
     const { id } = useParams()
-    // const myTrips = trips?.filter(trip => currentUser?.id === trip.user_id)
     let currentTrip = trips?.find((trip) => trip.id === +id)
 
     const [editTrip, setEditTrip] = useState({

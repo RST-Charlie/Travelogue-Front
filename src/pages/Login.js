@@ -13,7 +13,6 @@ const Login = ({ login }) => {
         const userInfo = {
             "user":{ email: data.email, password: data.password },
         };
-        console.log("log in page user info:", userInfo);
         login(userInfo);
         navigate('/')
         e.target.reset();
