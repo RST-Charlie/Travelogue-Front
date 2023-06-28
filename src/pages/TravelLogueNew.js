@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import { Form, FormGroup, Label, Input, Button, Row, Col, Alert } from "reactstrap"
 import countries from '../components/Countries'
 import regions from '../components/Regions'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
-const TravelLogueNew = ({ createTrip }) => {
+const TravelLogueNew = ({ currentUser, createTrip }) => {
     const [newTrip, setNewTrip] = useState({
         title: "",
         entry: "",
@@ -15,8 +15,11 @@ const TravelLogueNew = ({ createTrip }) => {
         state: "",
         country: "",
         region: "",
-        international: false
+        international: false,
+        user_id: ""
     })
+    const [error, setError] = useState(false)
+    const navigate = useNavigate()
 
     const handleChange = (e) => {
         setNewTrip({ ...newTrip, [e.target.name]: e.target.value })
@@ -29,26 +32,37 @@ const TravelLogueNew = ({ createTrip }) => {
         }));
     };
 
-    const handleClick = () => {
+    const handleClick = (e) => {
         if(
             newTrip.title !== "" && 
             newTrip.entry !== "" && 
             newTrip.country !== "" && 
             newTrip.region !== ""
             ) {
+            e.preventDefault()
             createTrip(newTrip)
-            window.location.href="/TravelLogueIndex"
+            navigate(`/mytrips`)
         }
         else {
             setError(true)
         }
     }
 
-    const [error, setError] = useState(false)
-
     return (
         <>
             <Form className="new-trip-form mx-4 mt-3">
+                <FormGroup>
+                    <Label for="user_id" hidden>
+                        User Id
+                    </Label>
+                    <Input
+                        id="user_id"
+                        name="user_id"
+                        onChange={handleChange}
+                        value={newTrip.user_id = currentUser?.id}
+                        type="hidden"
+                    />
+                </FormGroup>
                 <Row>
                     <Col className="form-group md-4">
                         <FormGroup>

@@ -13,7 +13,7 @@
     "react-dom": "^18.2.0",
     "react-router": "^6.13.0",
     "react-router-dom": "^6.13.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "react-strap": "^0.0.1",
     "react-testing-library": "^8.0.1",
     "reactstrap": "^9.2.0",
@@ -46,5 +46,8 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   }
 }

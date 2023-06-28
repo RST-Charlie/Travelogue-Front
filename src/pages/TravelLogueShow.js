@@ -3,6 +3,7 @@ import '../Styles/Index.css';
 import React from "react"
 import { Card, CardImg, CardBody, CardText, CardSubtitle, Button, Container } from "reactstrap"
 
+
 const TravelLogueShow = ({trips}) => {
     const { id } = useParams()
     let currentTrip = trips?.find((trip) => trip.id === +id)
@@ -79,6 +80,26 @@ const TravelLogueShow = ({trips}) => {
                                     disabled
                                 >   
                                     Edit travelogue
+                                </Button>
+                                <Button 
+                                    className="
+                                        btn-details 
+                                        my-3 
+                                        text-center"
+                                    color='secondary'
+                                    disabled
+                                >   
+                                    Delete travelogue
+                                </Button>
+                                <Button 
+                                    className="
+                                        btn-details 
+                                        my-3 
+                                        text-center"
+                                    color='secondary'
+                                    href={`/demotrips`}
+                                >   
+                                    Back to all
                                 </Button>
                             </div>
                         </Card>

@@ -3,16 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import '../Styles/LogIn.css';
 import "animate.css";
 
-
 const Login = ({ login }) => {
     const formRef = useRef();
     const navigate = useNavigate();
     const [loggedIn, setLoggedIn] = useState(false);
-
-    const handleLogin = () => {
-        setLoggedIn(true);
-        navigate('/');
-    };
+    
 
     const handleLogout = () => {
         setLoggedIn(false);
@@ -23,22 +18,31 @@ const Login = ({ login }) => {
         const formData = new FormData(formRef.current);
         const data = Object.fromEntries(formData);
         const userInfo = {
-            user: { email: data.email, password: data.password },
+            "user":{ email: data.email, password: data.password },
         };
-        console.log(userInfo);
-        handleLogin();
+        login(userInfo);
+        navigate('/')
         e.target.reset();
     };
 
     return (
         <>
-            <div>
+            <div id="login" 
+                className="
+                    login-container 
+                    animate__animated 
+                    animate__slideInUp"
+            >
                 <p className="login-banner animate__animated animate__fadeInLeft">
                     See your adventures
                 </p>
             </div>
-            <div id="login" className="login-container animate__animated animate__slideInUp">
-                <h1>Sign In</h1>
+            <div id="login" 
+                className="
+                    login-container 
+                    animate__animated 
+                    animate__slideInUp"
+            >
                 {!loggedIn ? (
                     <form ref={formRef} onSubmit={handleSubmit}>
                         <label>
@@ -86,4 +90,4 @@ const Login = ({ login }) => {
     );
 };
 
-export default Login;
+export default Login

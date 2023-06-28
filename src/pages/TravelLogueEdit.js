@@ -1,35 +1,62 @@
 import React, { useState } from 'react';
 import { Form, FormGroup, Label, Input, Button, Row, Col } from "reactstrap"
-import { useParams, useNavigate } from 'react-router-dom';
 import '../Styles/TravelLogueEdit.css';
-import mockUsers from '../mockUsers'
-import mockTrips from '../mockTrips'
 import countries from '../components/Countries'
 import regions from '../components/Regions'
+import { useParams, useNavigate } from "react-router-dom"
 
-const TravelLogueEdit = ({ trip, updateTrip, deleteTrip }) => {
-    const [currentUser, setCurrentUser] = useState(mockUsers[0]);
-    const [trips, setTrips] = useState(mockTrips);
-    
-    const [editTrip, setEditTrip] = useState({ ...trip });
-  
+
+const TravelLogueEdit = ({ trips, updateTrip, deleteTrip, currentUser }) => {   
+    const { id } = useParams()
+    let currentTrip = trips?.find((trip) => trip.id === +id)
+
+    const [editTrip, setEditTrip] = useState({
+        title: currentTrip?.title,
+        entry: currentTrip?.entry,
+        photo: currentTrip?.photo,
+        start_date: currentTrip?.start_date,
+        end_date: currentTrip?.end_date,
+        city: currentTrip?.city,
+        state: currentTrip?.state,
+        country: currentTrip?.country,
+        region: currentTrip?.regions,
+        international: currentTrip?.international,
+        user_id: ""
+
+    });
+
+    const navigate = useNavigate()
+
     const handleChange = (e) => {
         setEditTrip({ ...editTrip, [e.target.name]: e.target.value });
     };
   
     const handleClick = () => {
-        updateTrip(editTrip);
-        window.location.href="/TravelLogueIndex"
+        updateTrip(editTrip, currentTrip?.id );
+        navigate(`/mytrips/${currentTrip?.id}`)
     };
   
     const handleDelete = () => {
-        deleteTrip(editTrip.id); 
+        deleteTrip(currentTrip?.id)
+        navigate(`/mytrips`)
     };
   
      
     return (
         <>
             <Form className="edit-trip-form mx-5 mt-5">
+                <FormGroup>
+                    <Label for="user_id" hidden>
+                        User Id
+                    </Label>
+                    <Input
+                        id="user_id"
+                        name="user_id"
+                        onChange={handleChange}
+                        value={editTrip.user_id = currentUser?.id}
+                        type="hidden"
+                    />
+                </FormGroup>
                 <Row>
                     <Col className="form-group md-4">
                         <FormGroup>
@@ -126,7 +153,7 @@ const TravelLogueEdit = ({ trip, updateTrip, deleteTrip }) => {
                                 id="trip-region"
                                 type="select"
                                 name="region"
-                                placeholder="default trip did you go on?"
+                                placeholder="what trip did you go on?"
                                 className='text-secondary'
                                 onChange={handleChange}
                                 value={editTrip.region}>
