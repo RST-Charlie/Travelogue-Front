@@ -1,0 +1,49 @@
+/* Map container */
+.leaflet-container {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Map page container */
+  .MapPage-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Map wrapper */
+  .MapPage-mapWrapper {
+    flex: 1;
+    position: relative;
+  }
+  
+  /* Map */
+  .MapPage-map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  /* Marker icon */
+  .MapPage-marker-icon {
+    /* Customize the marker icon styles as per your requirements */
+    /* Example styles */
+    width: 24px;
+    height: 24px;
+    background-color: red;
+    border-radius: 50%;
+  }
+  
+  /* Marker popup */
+  .MapPage-marker-popup {
+    /* Customize the marker popup styles as per your requirements */
+    /* Example styles */
+    background-color: white;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  }
+  

@@ -15,6 +15,7 @@ import TravelLogueShow from './pages/TravelLogueShow';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import mockTrips from './mockTrips';
+import MapPage from './pages/MapPage';
 
 const App = () => {
 
@@ -145,9 +146,12 @@ const App = () => {
       
 
     return (
+
         <div className="App">
             <Header currentUser={currentUser} logout={logout}/>
-            <Routes>
+            
+        <Routes>
+                
                 <Route 
                     path="/" 
                     element={<Home />} 
@@ -192,6 +196,7 @@ const App = () => {
                         />
                     </>
                 )}
+                 <Route path="/mappage" element={<MapPage />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
