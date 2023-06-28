@@ -3,9 +3,10 @@ import '../Styles/TravelLogueProtectedShow.css';
 import React from "react"
 import { Card, CardImg, CardBody, CardText, CardSubtitle, Button, Container } from "reactstrap"
 
-const TravelLogueProtectedShow = ({trips}) => {
+const TravelLogueProtectedShow = ({ currentUser, trips}) => {
     const { id } = useParams()
-    let currentTrip = trips?.find((trip) => trip.id === +id)
+    const myTrips = trips?.filter(trip => currentUser?.id === trip.user_id)
+    let currentTrip = myTrips?.find((trip) => trip.id === +id)
 
     return (
         <>
@@ -19,7 +20,7 @@ const TravelLogueProtectedShow = ({trips}) => {
                     Travelogue: 
                 </h1>
                 <h1>
-                    {currentTrip.title}
+                    {currentTrip?.title}
                 </h1>
             </Container>
             <main
@@ -46,7 +47,7 @@ const TravelLogueProtectedShow = ({trips}) => {
                                     className="mb-text-muted"
                                     tag="h5"
                                 >
-                                    {currentTrip.city}, {currentTrip.state}
+                                    {currentTrip.city}   {currentTrip.state}
                                     <br />
                                     {currentTrip.country}, {currentTrip.region}
                                 </CardSubtitle>
@@ -76,7 +77,7 @@ const TravelLogueProtectedShow = ({trips}) => {
                                         my-3 
                                         text-center"
                                     color='secondary'
-                                    href={`/TravelLogueEdit/${currentTrip.id}`}
+                                    href={`/changetrips/${currentTrip.id}`}
                                 >   
                                     Edit travelogue
                                 </Button>

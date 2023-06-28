@@ -59,7 +59,7 @@ const TravelLogueIndex = ({trips}) => {
                                 <Button 
                                     className="btn-details mt-3 text-center"
                                     color="info"
-                                    href={`/TravelLogueShow/${trip.id}`}
+                                    href={`/demotrips/${trip.id}`}
                                 >   
                                     See travelogue
                                 </Button>

@@ -1,15 +1,10 @@
 import React from 'react';
-import { Card, CardGroup, CardSubtitle, Container, CardImg, CardBody, CardTitle, CardText, Button } from 'reactstrap';
-import mockTrips from '../mockTrips';
-import ani from '../assets/turkey.jpg';
-import sunset from '../assets/sunset.jpg';
-import austrailia from '../assets/austrailia.jpeg';
-import istockphoto from '../assets/istockphoto-147049964-612x612.jpg';
-import hawaii from '../assets/hawaii.webp';
+import { Card, CardSubtitle, Container, CardImg, CardBody, CardTitle, Button } from 'reactstrap';
 import '../Styles/TravelLogueProtectedIndex.css';
 
 const TravelLogueProtectedIndex = ({ currentUser, trips }) => {
- 
+    const myTrips = trips?.filter(trip => currentUser?.id === trip.user_id)
+    
     return (
         <Container 
             className="
@@ -21,7 +16,7 @@ const TravelLogueProtectedIndex = ({ currentUser, trips }) => {
                 mt-2 px-2 py-2
                 align-items center"
         >
-            {trips?.map((trip, index) => {
+            {myTrips?.map((trip, index) => {
                 return(
                     <Card 
                         key={index} 
@@ -65,7 +60,7 @@ const TravelLogueProtectedIndex = ({ currentUser, trips }) => {
                                 <Button 
                                     className="btn-details mt-3 text-center" 
                                     color="info"
-                                    href={`/TravelLogueProtectedShow/${trip.id}`}
+                                    href={`/mytrips/${trip.id}`}
                                 >   
                                     See travelogue
                                 </Button>

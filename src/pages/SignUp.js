@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "../Styles/SignUp.css";
 import "animate.css";
 
-const SignUp = () => {
+const SignUp = ({ signup }) => {
     const formRef = useRef();
     const navigate = useNavigate();
 
@@ -12,10 +12,10 @@ const SignUp = () => {
         const formData = new FormData(formRef.current);
         const data = Object.fromEntries(formData);
         const userInfo = {
-            user: { email: data.email, password: data.password },
+            "user":{ email: data.email, password: data.password },
         };
 
-        console.log(userInfo);
+        signup(userInfo);
         navigate("/");
         formRef.current.reset(); 
     };
