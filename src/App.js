@@ -21,7 +21,7 @@ const App = () => {
     const [currentUser, setCurrentUser] = useState([null]);
     const [trips, setTrips] = useState([])
     
-    const url = "http://localhost:3000";
+    const url = "https://travelogue-d6r2.onrender.com";
 
     useEffect(() => {
         const loggedInUser = localStorage.getItem("token")
