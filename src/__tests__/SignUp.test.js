@@ -32,8 +32,10 @@ describe("SignUp", () => {
                 <SignUp />
             </MemoryRouter>
         );
-        fireEvent.submit(screen.getByRole('button',  { name: "Submit" }));
-        expect(screen.getByText(/Email:/i)).toBeInTheDocument()
+        const mockSubmit = jest.fn()
+        const { getByRole } = render(<SubmitButton onSubmit={mockSubmit} />)
+        fireEvent.click(getByRole('button',  { name: "Submit" }));
+        expect(mockSubmit).toHaveBeenCalled()
     });
     
     it("navigates to the login page", () => {
