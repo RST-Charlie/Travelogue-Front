@@ -77,9 +77,9 @@ const App = () => {
             },
             method: "DELETE"
         })
-            .then((response) => response.json())
-            .then((payload) => readTrip())
-            .catch((errors) => console.log("delete errors:", errors))
+        .then((response) => response.json())
+        .then((payload) => readTrip())
+        .catch((errors) => console.log("delete errors:", errors))
     }
 
     const login = (userInfo) => {
