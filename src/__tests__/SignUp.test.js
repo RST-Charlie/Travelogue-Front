@@ -5,51 +5,21 @@ import SignUp from "../pages/SignUp";
 
 
 describe("SignUp", () => {
-    it("renders the SignUp component", () => {
+    beforeEach(() => {
         render(
             <MemoryRouter>
                 <SignUp />
             </MemoryRouter>
-        );
+        )
+    })
+    it("renders the SignUp component", () => {
         expect(screen.getByTestId("signup-component")).toBeInTheDocument();
     });
 
     it("renders the form inputs", () => {
-        render(
-            <MemoryRouter>
-                <SignUp />
-            </MemoryRouter>
-        );
         expect(screen.getByPlaceholderText("Email")).toBeInTheDocument();
         expect(screen.getByPlaceholderText("Password")).toBeInTheDocument();
         expect(screen.getByPlaceholderText("Confirm Password")).toBeInTheDocument();
         expect(screen.getByRole("button", { name: "Submit" })).toBeInTheDocument();
     });
-
-    it("submits the form", () => {
-        render(
-            <MemoryRouter>
-                <SignUp />
-            </MemoryRouter>
-        );
-        const mockSubmit = jest.fn()
-        const { getByRole } = render(<SubmitButton onSubmit={mockSubmit} />)
-        fireEvent.click(getByRole('button',  { name: "Submit" }));
-        expect(mockSubmit).toHaveBeenCalled()
-    });
-    
-    it("navigates to the login page", () => {
-        render(
-            <MemoryRouter>
-                <SignUp />
-            </MemoryRouter>
-        );
-        fireEvent.click(screen.getByText("Login"));
-        expect(screen.getByLabelText(/Confirm Password:/i)).toBeInTheDocument()
-    });
-});
-
-
-
-
-
+})

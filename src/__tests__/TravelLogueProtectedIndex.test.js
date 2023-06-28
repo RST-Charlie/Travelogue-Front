@@ -5,18 +5,32 @@ import TravelLogueProtectedIndex from '../pages/TravelLogueProtectedIndex';
 import mockTrips from '../mockTrips';
 import { Button, Card } from 'reactstrap';
 
-describe('<TravelLogueProtectedIndex />', () => {
-    beforeEach(() => {
+describe('TravelLogueProtectedIndex', () => {
+    const currentUser = { id: 1 }; 
+    const trips = [
+        { id: 1, user_id: 1, country: 'Country 1', title: 'Trip 1', photo: 'photo1.jpg' },
+        { id: 2, user_id: 1, country: 'Country 2', title: 'Trip 2', photo: 'photo2.jpg' },
+    ];
+
+    it('renders the component with user trips', () => {
         render(
-            <BrowserRouter>
-                <TravelLogueProtectedIndex trips={mockTrips}/>
-            </BrowserRouter>
-        );
+            <MemoryRouter>
+                <TravelLogueProtectedIndex currentUser={currentUser} trips={trips} />
+            </MemoryRouter>
+    );
+        trips.forEach((trip) => {
+            expect(screen.getByText(trip.title)).toBeInTheDocument();
+            expect(screen.getByText(trip.country)).toBeInTheDocument();
+            expect(screen.getByAltText(`Photo from a trip to ${trip.country}`)).toBeInTheDocument();
+        });
     });
 
-    it('displays to a user saved trips', () => {
-        mockTrips.forEach((trip) =>{
-            expect(screen.getByText(trip.title)).toBeInTheDocument()
-        })
+    it('renders the component without user trips', () => {
+        render(
+            <MemoryRouter>
+                <TravelLogueProtectedIndex currentUser={currentUser} trips={[]} />
+            </MemoryRouter>
+        );
+        expect(screen.queryByRole('link', { name: 'See travelogue' })).not.toBeInTheDocument();
     });
 });
