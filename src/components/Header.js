@@ -14,7 +14,7 @@ const Header = ({ currentUser, logout }) => {
 
     return (
         <>
-            <Navbar className="Navbar">
+            <Navbar className="navbar">
                 <NavbarBrand href="/">
                     <img
                         alt="logo"
@@ -26,7 +26,7 @@ const Header = ({ currentUser, logout }) => {
                     />
                     RSTech
                 </NavbarBrand>
-                <div className="Links">
+                <div className="links">
                     <Nav className="nav m1-auto">
                         {currentUser && (
                             <>
@@ -56,7 +56,7 @@ const Header = ({ currentUser, logout }) => {
                             </>
                         )}
                         <NavItem>
-                            <NavLink href="/demotrips">See Adventures</NavLink>
+                            <NavLink href="/demotrips">Adventures</NavLink>
                         </NavItem>
                     </Nav>
                 </div>

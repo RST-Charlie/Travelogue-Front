@@ -2,23 +2,23 @@
     justify-content: left;
 }
 
-.Links {
+.links {
     justify-content: flex-end;
     color:white;
 }
 
-.NavLink {
+.navlink {
     color:whitesmoke !important;
 }
 
-.Navbar a.nav-link:hover,
-.Navbar a.nav-link:focus,
-.Navbar a.navbar-brand:hover,
-.Navbar a.navbar-brand:focus  {
+.navbar a.nav-link:hover,
+.navbar a.nav-link:focus,
+.navbar a.navbar-brand:hover,
+.navbar a.navbar-brand:focus  {
     color: #ff914d;
 }
 
-.Navbar {
+.navbar {
     background-color:#5e17eb;
 }
 
