@@ -15,7 +15,7 @@ import TravelLogueShow from './pages/TravelLogueShow';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import mockTrips from './mockTrips';
-import MapPage from './pages/MapPage';
+
 
 const App = () => {
 
@@ -196,7 +196,6 @@ const App = () => {
                         />
                     </>
                 )}
-                 <Route path="/mappage" element={<MapPage />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />

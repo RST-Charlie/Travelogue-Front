@@ -1,5 +1,5 @@
 import React from 'react';
-import "../Styles/Home.css"
+import "../Styles/home.css"
 import Plane from "../assets/planebanner.png"
 import 'animate.css';
 

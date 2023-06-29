@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap'; 
 import Airplane from "../assets/airplanelogo.png"
-import "../Styles/Header.css"
+import "../Styles/header.css"
 
 
 const Header = () => {
