@@ -1,16 +1,17 @@
-import React, { useState } from 'react'
-import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap'; 
-import Airplane from "../assets/airplanelogo.png"
-import "../Styles/Header.css"
+import React from 'react';
+import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import Airplane from '../assets/airplanelogo.png';
+import { useNavigate } from 'react-router-dom';
+import '../Styles/Header.css';
 
+const Header = ({ currentUser, logout }) => {
+    const navigate = useNavigate();
 
-const Header = () => {
-
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-    const handleLogout = () => {
-        setIsLoggedIn(!isLoggedIn);
+    const handleClick = () => {
+        logout();
+        navigate('/');
     };
+
     return (
         <>
             <Navbar className="Navbar">
@@ -20,43 +21,49 @@ const Header = () => {
                         src={Airplane}
                         style={{
                             height: 40,
-                            width: 40
+                            width: 40,
                         }}
                     />
                     RSTech
                 </NavbarBrand>
                 <div className="Links">
                     <Nav className="nav m1-auto">
-                        {isLoggedIn ? (
-                        <>
-                        <NavItem className="mr-auto">
-                            <NavLink onClick={() => handleLogout()}>Log Out</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink href="/addtrip">Add Trip</NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink href="/mytrips">My Trips</NavLink>
-                        </NavItem>
-                        </>
-                        ) : (
-                        <NavItem>
-                            <NavLink href="/login" onClick={() => handleLogout()}>
-                                Sign In
-                            </NavLink>
-                        </NavItem>
+                        {currentUser && (
+                            <>
+                                <NavItem className="mr-auto">
+                                    <NavLink onClick={handleClick}>Log Out</NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="/addtrip">Add Trip</NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="/mytrips">My Trips</NavLink>
+                                </NavItem>
+                            </>
+                        )}
+                        {!currentUser && (
+                            <>
+                                <NavItem>
+                                    <NavLink href="/login">
+                                        Sign In
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="/signup">
+                                        Sign Up
+                                    </NavLink>
+                                </NavItem>
+                            </>
                         )}
                         <NavItem>
-                            <NavLink href="/demotrips">
-                                See Adventures
-                            </NavLink>
+                            <NavLink href="/demotrips">See Adventures</NavLink>
                         </NavItem>
                     </Nav>
                 </div>
             </Navbar>
         </>
-
     );
-}
+};
 
 export default Header;
+
