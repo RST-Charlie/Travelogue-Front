@@ -2,7 +2,7 @@
     justify-content: left;
 }
 
-.Links {
+.links {
     justify-content: flex-end;
     color:white;
 }
@@ -18,7 +18,7 @@
     color: #ff914d;
 }
 
-.Navbar {
+.navbar {
     background-color:#5e17eb;
 }
 
@@ -31,3 +31,4 @@ a.navbar-brand{
     color:whitesmoke;
     font-size: 50px;
 }
+
