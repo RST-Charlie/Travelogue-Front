@@ -1,13 +1,13 @@
 import React from 'react'
 import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap'; 
 import Airplane from "../assets/airplanelogo.png"
-import "../Styles/header.css"
+import "../Styles/Header.css"
 
 
 const Header = () => {
     return (
         <>
-            <Navbar className="Navbar">
+            <Navbar className="navbar">
                 <NavbarBrand href="/">
                     <img
                         alt="logo"
@@ -19,7 +19,7 @@ const Header = () => {
                     />
                     RSTech
                 </NavbarBrand>
-                <div className="Links">
+                <div className="links">
                     <Nav className="nav justify-content-end">
                         <NavItem>
                             <NavLink href="/login">

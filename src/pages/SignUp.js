@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import "../Styles/signup.css";
+import "../Styles/SignUp.css";
 import "animate.css";
 
 const SignUp = ({ signup }) => {

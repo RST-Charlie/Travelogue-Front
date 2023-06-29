@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Form, FormGroup, Label, Input, Button, Row, Col } from "reactstrap"
-import '../Styles/travellogueedit.css';
+import '../Styles/TravelLogueEdit.css';
 import countries from '../components/Countries'
 import regions from '../components/Regions'
 import { useParams, useNavigate } from "react-router-dom"

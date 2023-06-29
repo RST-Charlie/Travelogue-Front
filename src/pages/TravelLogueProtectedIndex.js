@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardSubtitle, Container, CardImg, CardBody, CardTitle, Button } from 'reactstrap';
-import '../Styles/travellogueprotectedindex.css';
+import '../Styles/TravelLogueProtectedIndex.css';
 
 const TravelLogueProtectedIndex = ({ currentUser, trips }) => {
     const myTrips = trips?.filter(trip => currentUser?.id === trip.user_id)

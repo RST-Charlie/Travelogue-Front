@@ -1,5 +1,5 @@
 import React from 'react' 
-import "../Styles/notfound.css"
+import "../Styles/NotFound.css"
 import 'animate.css';
 
 
