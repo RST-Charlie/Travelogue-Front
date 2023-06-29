@@ -26,21 +26,29 @@ const Header = () => {
                     RSTech
                 </NavbarBrand>
                 <div className="Links">
-                    <Nav className="nav justify-content-end">
+                    <Nav className="nav m1-auto">
                         {isLoggedIn ? (
-                        <NavItem>
+                        <>
+                        <NavItem className="mr-auto">
                             <NavLink onClick={() => handleLogout()}>Log Out</NavLink>
                         </NavItem>
+                        <NavItem>
+                            <NavLink href="/addtrip">Add Trip</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink href="/mytrips">My Trips</NavLink>
+                        </NavItem>
+                        </>
                         ) : (
                         <NavItem>
                             <NavLink href="/login" onClick={() => handleLogout()}>
-                                Log In
+                                Sign In
                             </NavLink>
                         </NavItem>
                         )}
                         <NavItem>
-                            <NavLink href="/AboutUs">
-                                Contact
+                            <NavLink href="/demotrips">
+                                See Adventures
                             </NavLink>
                         </NavItem>
                     </Nav>
