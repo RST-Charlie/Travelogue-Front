@@ -7,7 +7,7 @@ describe('Footer', () => {
     const { getByText } = render(<Footer />);
     const footerText = getByText((content, element) => {
         return (
-            content === 'Need to reach us? Drop us a line at:' &&
+            content === '☺  Meet RSTech' &&
             element.tagName.toLowerCase() === 'a'
         );
     });

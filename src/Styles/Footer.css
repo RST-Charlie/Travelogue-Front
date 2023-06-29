@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
 html, body {
     height: 100%;
     margin: 0;
@@ -5,18 +7,20 @@ html, body {
 }
   
 .footer {
-    position: fixed;
-    bottom: 0;
-    bottom: 1%;
     transform: translateX(-50%);
-    font-size: 1.6vw;
-    background-color: #5e17eb;
-    width: 30%;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 20vw;
+    font-size: 18px;
+    background-color: "";
     color: whitesmoke;
-    margin-left: 5%;
+}
+
+.toggler-icon {
+    background-color: #5e17eb;
+    color: whitesmoke;
+
+}
+
+.toggler-items {
+    background-color: #5e17eb;
+    width:fit-content;
+    border-radius: 2dvw;
 }
