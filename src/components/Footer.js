@@ -13,7 +13,7 @@ const Footer = () => {
             <Navbar className="
                 d-flex flex-row justify-content-start
                 p-2 mt-5
-                sticky-bottom
+                fixed-bottom
                 animate__animated 
                 animate__slideInUp 
                 footer"
