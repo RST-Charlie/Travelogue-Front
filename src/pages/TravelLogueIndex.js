@@ -1,5 +1,5 @@
 import React from "react"
-import '../Styles/Index.css'
+import '../styles/Index.css'
 import { Card, CardBody, CardTitle, CardSubtitle, Button, Container, CardImg } from "reactstrap"
 
 const TravelLogueIndex = ({trips}) => {

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Navbar, Nav, Button, NavbarToggler, Collapse, NavItem, NavLink } from 'reactstrap'; 
-import "../Styles/Footer.css"
+import "../styles/Footer.css"
 import 'animate.css';
 
 const Footer = () => {

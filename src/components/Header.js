@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 import Airplane from '../assets/airplanelogo.png';
 import { useNavigate } from 'react-router-dom';
-import '../Styles/Header.css';
+import '../styles/Header.css';
 
 const Header = ({ currentUser, logout }) => {
     const navigate = useNavigate();
