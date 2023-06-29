@@ -14,6 +14,7 @@ import TravelLogueProtectedShow from './pages/TravelLogueProtectedShow';
 import TravelLogueShow from './pages/TravelLogueShow';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import PackingList from './pages/PackingList'
 import mockTrips from './mockTrips';
 
 const App = () => {
@@ -189,6 +190,10 @@ const App = () => {
                         <Route 
                             path="/changetrips/:id" 
                             element={<TravelLogueEdit trips={trips} updateTrip={updateTrip} deleteTrip={deleteTrip} currentUser={currentUser} />} 
+                        />
+                        <Route 
+                            path="/PackingList" 
+                            element={<PackingList currentUser={currentUser} trips={trips} />} 
                         />
                     </>
                 )}

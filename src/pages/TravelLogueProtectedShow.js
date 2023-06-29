@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import '../Styles/TravelLogueProtectedShow.css';
+import '../styles/TravelLogueProtectedShow.css';
 import React from "react"
 import { Card, CardImg, CardBody, CardText, CardSubtitle, Button, Container } from "reactstrap"
 

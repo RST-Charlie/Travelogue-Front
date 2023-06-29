@@ -1,5 +1,5 @@
 import React from 'react'
-import "../Styles/Footer.css"
+import "../styles/Footer.css"
 import 'animate.css';
 
 const Footer = () => {
