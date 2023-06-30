@@ -1,104 +1,62 @@
 import { useParams } from 'react-router-dom';
 import '../styles/Index.css';
-import React from "react"
-import { Card, CardImg, CardBody, CardText, CardSubtitle, Button, Container } from "reactstrap"
-
+import React from "react";
+import { Card, CardImg, CardBody, CardText, CardSubtitle, Button, Container } from "reactstrap";
+import '../styles/Index.css';
 
 const TravelLogueShow = ({trips}) => {
-    const { id } = useParams()
-    let currentTrip = trips?.find((trip) => trip.id === +id)
+    const { id } = useParams();
+    let currentTrip = trips?.find((trip) => trip.id === +id);
 
     return (
         <>
-            <Container
-                className='
-                    text-center
-                    text-white
-                    mx-auto mt-5'
-            >
-                <h1>
-                    Travelogue: 
-                </h1>
-                <h1>
-                {currentTrip.title}
-                </h1>
+            <Container className="travelogue-cont">
+                <p className="travelogue-title">
+                    Travelogue:
+                </p>
+                <p className="travelogue">
+                    {currentTrip.title}
+                </p>
             </Container>
-            <main
-                className='mx-auto my-5'
-                style={{ 
-                    display: "flex",
-                    flexDirection:"row", 
-                    flexWrap: "wrap",
-                    justifyContent:"center"
-                }}
-            >
+            <main className="mx-auto my-5" style={{ 
+                display: "flex",
+                flexDirection: "row",
+                flexWrap: "wrap",
+                justifyContent: "center"
+            }}>
                 {currentTrip && (
                     <>
                         <CardImg
                             alt="Photo from trip"
                             src={currentTrip.photo}
-                            style={{ width:"80vw", objectFit: "contain"}}
+                            className="travelogue-image"
                         />
-                        <Card
-                            style={{ width:"80vw" }}
-                        >
+                        <Card className="travelogue-card">
                             <CardBody>
-                                <CardSubtitle
-                                    className="mb-text-muted"
-                                    tag="h5"
-                                >
+                                <CardSubtitle className="travelogue-card-subtitle" tag="h5">
                                     {currentTrip.city}, {currentTrip.state}
                                     <br />
                                     {currentTrip.country}, {currentTrip.region}
                                 </CardSubtitle>
 
-                                <CardSubtitle
-                                    className="mb-2 text-muted mt-2"
-                                    tag="h5"
-                                >
+                                <CardSubtitle className="travelogue-card-subtitle" tag="h5">
                                     Arrived: {currentTrip.start_date}
                                     <br />
-                                    Departed:  {currentTrip.end_date}
+                                    Departed: {currentTrip.end_date}
                                 </CardSubtitle>
                                 
                                 <CardText>
                                     {currentTrip.entry}
                                 </CardText>
                             </CardBody>
-                            <div 
-                                className="
-                                    justify-content-between
-                                    align-items-center
-                                    text-center"
-                            >
-                                <Button 
-                                    className="
-                                        btn-details 
-                                        my-3 
-                                        text-center"
-                                    color='secondary'
-                                    disabled
-                                >   
+                            <div className="travelogue-btn-cont">
+                                <Button className="btn-details" color="secondary" disabled>
                                     Edit travelogue
                                 </Button>
-                                <Button 
-                                    className="
-                                        btn-details 
-                                        my-3 
-                                        text-center"
-                                    color='secondary'
-                                    disabled
-                                >   
+                                <Button className="btn-details" color="secondary" disabled>
                                     Delete travelogue
                                 </Button>
-                                <Button 
-                                    className="
-                                        btn-details 
-                                        my-3 
-                                        text-center"
-                                    color='secondary'
-                                    href={`/demotrips`}
-                                >   
+                                <Button className="btn-details" color="secondary" href={`/demotrips`}>
                                     Back to all
                                 </Button>
                             </div>
@@ -109,7 +67,8 @@ const TravelLogueShow = ({trips}) => {
             <br />
             <br />
         </>
-    )
+    );
 }
 
 export default TravelLogueShow;
+

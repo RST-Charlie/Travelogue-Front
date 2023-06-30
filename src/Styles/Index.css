@@ -1,35 +1,29 @@
-.my-card {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    transition: box-shadow 0.3s ease;
+.travelogue-cont {
+    text-align: center;
+    color: white;
+    margin: auto;
+    margin-top: 5rem;
 }
 
-.my-card:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+.travelogue {
+    font-size: 2rem;
 }
 
-.my-card:hover .card-img {
-    opacity:   100%;
+.travelogue-image {
+    width: 80vw;
+    object-fit: contain;
 }
 
-.my-card:hover .btn-details {
-    transform: translateY(-2px);
+.travelogue-card {
+    width: 80vw;
 }
 
-.card-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 80%;
+.travelogue-card-subtitle {
+    margin-bottom: 0.5rem;
+    margin-top: 2rem;
 }
 
-.card-title {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-}
-
-.button-container {
+.travelogue-btn-cont {
     display: flex;
     justify-content: space-between;
     align-items: center;
