@@ -7,7 +7,7 @@ describe('AboutUs Component', () => {
         render(<AboutUs />);
     });
 
-    it('should navigate to ... when link is clicked', () => {
+    it('navigates to appropriate link', () => {
         const { getByTestId } = render(<a data-testid='link' href="https://www.linkedin.com/in/surielis-rodriguez/">Click Me</a>);
         expect(getByTestId('link')).toHaveAttribute('href', 'https://www.linkedin.com/in/surielis-rodriguez/');
     });
