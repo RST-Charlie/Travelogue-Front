@@ -16,6 +16,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import mockTrips from './mockTrips';
 
+
 const App = () => {
 
     const [currentUser, setCurrentUser] = useState([null]);
@@ -145,9 +146,12 @@ const App = () => {
       
 
     return (
+
         <div className="App">
             <Header currentUser={currentUser} logout={logout}/>
-            <Routes>
+            
+        <Routes>
+                
                 <Route 
                     path="/" 
                     element={<Home />} 

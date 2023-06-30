@@ -52,8 +52,10 @@ For the Front End (you will need to use yarn in your terminal to add dependencie
  yarn add animate.css
 
  import 'animate.css' 
-  
-After installing Animate.css, add the class animate__animated to an element, along with any of the animation names (don't forget the animate__ prefix!):
+ 
+ 8.  Add leaflet
+
+ yarn add leaflet react-leaflet
 
  9.  STRETCH Add redux
 

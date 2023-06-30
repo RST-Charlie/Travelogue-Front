@@ -4,6 +4,7 @@ import Airplane from '../assets/airplanelogo.png';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Header.css';
 
+
 const Header = ({ currentUser, logout }) => {
     const navigate = useNavigate();
 
@@ -55,6 +56,7 @@ const Header = ({ currentUser, logout }) => {
                                 </NavItem>
                             </>
                         )}
+
                         <NavItem>
                             <NavLink href="/demotrips">Adventures</NavLink>
                         </NavItem>
