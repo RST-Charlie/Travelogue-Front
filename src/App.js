@@ -151,7 +151,7 @@ const App = () => {
         <div className="App">
             <Header currentUser={currentUser} logout={logout}/>
             
-        <Routes>
+            <Routes>
                 
                 <Route 
                     path="/" 
