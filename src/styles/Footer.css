@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
+.footer {
+    transform: translateX(-50%);
+    font-size: 16px;
+    background-color: "";
+    color: whitesmoke;
+}
+
+.footer-toggler-icon {
+    background-color: #5e17eb;
+    color: whitesmoke;
+
+}
+
+.footer-toggler-items {
+    background-color: #5e17eb;
+    width:fit-content;
+    border-radius: 2dvw;
+}
