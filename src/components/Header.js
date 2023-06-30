@@ -5,14 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import '../styles/Header.css';
 
 
-const Header = ({ currentUser, logout }) => {
-    const navigate = useNavigate();
 
-    const handleClick = () => {
-        logout();
-        navigate('/');
-    };
-
+const Header = () => {
     return (
         <>
             <Navbar className="navbar">

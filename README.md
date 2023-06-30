@@ -12,6 +12,9 @@ Dependencies:
 
 For the Front End (you will need to use yarn in your terminal to add dependencies), you can check your package.json file and ensure the proper dependencies have been installed:
 
+live link frontend: https://travelogue-app.onrender.com/
+live link backend: https://travelogue-d6r2.onrender.com/
+
 1.  Add react-router
 
  yarn add react-router
