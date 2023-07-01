@@ -7,10 +7,11 @@
     --teal: #12a7bb;
     --red: #a63a3a;
     --white: #ffff;
-    --trans-indigo: #5e17eba8;
+    --trans-indigo: #5e17ebbd;
     --trans-green: #5fff4d91;
     --trans-white: #ffffff9f;
 }
+
 html,
 body {
     height: 100vh;
@@ -19,7 +20,6 @@ body {
     font-family: 'Pathway Gothic One';
     font-size: 18px;
 }
-
 
 .App {
     background: linear-gradient(90deg, var(--purple), var(--orange));
