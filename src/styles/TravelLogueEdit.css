@@ -1,45 +1,27 @@
-#formstyle {
-    max-width: 500px;
-    margin: 0 auto;
-}
-
-label {
-    font-weight: bold;
-}
-
-input,
-textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    margin-top: 10px;
-    padding: 8px 16px;
-    background-color: #007bff;
-    color: #fff;
+.btn-details__edit {
+    background-color: var(--indigo);
+    color: var(--white);
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    padding: 8px 16px;
+    transition: transform 0.3s ease;
 }
 
-button:hover {
-    background-color: #0056b3;
+.btn-details__edit:hover {
+    transform: translateY(-2px);
+    background-color: var(--purple);
+    color: var(--white);
 }
 
-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
+.btn-details__delete {
+    background-color: var(--orange);
+    color: var(--white);
+    border: none;
+    padding: 8px 16px;
+    transition: transform 0.3s ease;
 }
 
-.button-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.button-container button {
-    margin-right: 10px;
+.btn-details__delete:hover {
+    transform: translateY(-2px);
+    background-color: var(--red);
+    color: var(--white);
 }

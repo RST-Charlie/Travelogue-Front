@@ -2,22 +2,22 @@
     display:flex;
 }
 
-.mission-statement {
+.header__home {
     margin-left: 8dvw;
     margin-top: 25dvh;
 }
 
-.home-title {
+.title__home {
     font-size: 70px;
     color:white;
 }
 
-.logo-mission {
+.mission__home {
     color:white;
     font-size:20px
 }
 
-.move-image {
+.move-image__home {
     animation: moveImage 30s linear infinite;
     height: 50dvw;
     margin-top: 18dvh;

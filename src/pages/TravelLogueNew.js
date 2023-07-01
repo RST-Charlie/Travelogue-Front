@@ -3,6 +3,7 @@ import { Form, FormGroup, Label, Input, Button, Row, Col, Alert } from "reactstr
 import countries from '../components/Countries'
 import regions from '../components/Regions'
 import { useNavigate } from 'react-router-dom'
+import '../styles/New.css'
 
 const TravelLogueNew = ({ currentUser, createTrip }) => {
     const [newTrip, setNewTrip] = useState({
@@ -153,7 +154,7 @@ const TravelLogueNew = ({ currentUser, createTrip }) => {
                 <Row>
                     <Col>
                         <FormGroup>
-                            <Label for="trip-region" className="ftext-white">
+                            <Label for="trip-region" className="text-white">
                                 Region*:
                             </Label>
                             <Input
@@ -189,7 +190,7 @@ const TravelLogueNew = ({ currentUser, createTrip }) => {
 
                     <Col>
                         <FormGroup>
-                            <Label for="trip-start_date" className="form-label text-white">
+                            <Label for="trip-start_date" className="text-white">
                                 Start date:
                             </Label>
                             <Input
@@ -205,7 +206,7 @@ const TravelLogueNew = ({ currentUser, createTrip }) => {
 
                     <Col>
                         <FormGroup>
-                            <Label for="trip-end_date" className=" text-white">
+                            <Label for="trip-end_date" className="text-white">
                                 End date:
                             </Label>
                             <Input
@@ -223,7 +224,7 @@ const TravelLogueNew = ({ currentUser, createTrip }) => {
                 <Row>
                     <Col className='text-center'>
                         <FormGroup>
-                            <Label for="trip-entry" className=" text-white">
+                            <Label for="trip-entry" className="text-white">
                                 Entry*:
                             </Label>
                             <Input
@@ -241,16 +242,15 @@ const TravelLogueNew = ({ currentUser, createTrip }) => {
                     <Col className='text-center'>
                         <Button
                             onClick={handleClick}
-                            color='info'
-                            className="new-button"
-                            >
+                            className="btn-details__new"
+                        >
                             Add this trip to my Travelogue!
                         </Button>
                     </Col>
                 </Row>
             </Form>
             {error && (
-                <Alert color="info" className='new-error text-center mx-auto my-4' style={{ width: "50vw" }}>
+                <Alert color="info" className='text-center mx-auto my-4' style={{ width: "50vw" }}>
                     Error!  <br />
                     Please make sure you are logged in and have filled out all required fields: title, entry, country, and region. 
                 </Alert>

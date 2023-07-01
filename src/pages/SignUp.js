@@ -22,66 +22,70 @@ const SignUp = ({ signup }) => {
 
     return (
         <>
-            <div 
-                className="
-                    signup-statement 
-                    animate__animated 
-                    animate__fadeInLeft"
-            >
-                <p className="signup-title">
-                    Start logging with us
-                </p>
-                <p className="banner">
-                    Embark on new adventures
-                </p>
-            </div>
-            <div 
-                className="animate__animated animate__slideInUp signup" 
-                data-testid="signup-component"
-            >
-                <form 
-                    ref={formRef} 
-                    onSubmit={handleSubmit}
-                    className="form__signup"
+            <div>
+                <div 
+                    className="
+                        header__signup 
+                        animate__animated 
+                        animate__fadeInLeft"
                 >
-                    <label>
-                        Email:
+                    <p className="title__signup">
+                        Start logging with us
+                    </p>
+                    <p className="banner__signup">
+                        Embark on new adventures
+                    </p>
+                </div>
+                <div 
+                    className="
+                        animate__animated 
+                        animate__slideInUp 
+                        form__signup" 
+                    data-testid="signup-component"
+                >
+                    <form 
+                        ref={formRef} 
+                        onSubmit={handleSubmit}
+                    >
+                        <label>
+                            Email:
+                            <input 
+                                type="email" 
+                                name="email" 
+                                placeholder="Email" 
+                            />
+                        </label>
+                        <label>
+                            Password:
+                            <input 
+                                type="password" 
+                                name="password" 
+                                placeholder="Password" 
+                            />
+                        </label>
+                        <label>
+                            Confirm Password:
+                            <input 
+                                type="password" 
+                                name="password_confirmation" 
+                                placeholder="Confirm Password" 
+                            />
+                        </label>
+                        <br />
                         <input 
-                            type="email" 
-                            name="email" 
-                            placeholder="Email" 
+                            type="submit" 
+                            value="Submit" 
+                            className="submit__signup" 
                         />
-                    </label>
-                    <label>
-                        Password:
-                        <input 
-                            type="password" 
-                            name="password" 
-                            placeholder="Password" 
-                        />
-                    </label>
-                    <label>
-                        Confirm Password:
-                        <input 
-                            type="password" 
-                            name="password_confirmation" 
-                            placeholder="Confirm Password" 
-                        />
-                    </label>
+                    </form>
                     <br />
-                    <input 
-                        type="submit" 
-                        value="Submit" 
-                        className="submit-signup" 
-                    />
-                </form>
-                <br />
-                <div className="login-link">
-                    Already registered? 
-                    <a href="/login">
-                        Login
-                    </a> 
-                    here.
+                    <div className="link__to-login">
+                        Already registered? 
+                        <a href="/login">
+                            Login
+                        </a> 
+                        here.
+                    </div>
                 </div>
             </div>
             <br />

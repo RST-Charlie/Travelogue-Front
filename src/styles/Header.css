@@ -1,4 +1,4 @@
-.logo {
+.logo__header {
     justify-content: left;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .navbar__header {
-    background-color: var(--indigo);
+    background-color: var(--trans-indigo);
 }
 
 a.nav-link{
@@ -30,9 +30,4 @@ a.nav-link{
 a.navbar-brand {
     color:whitesmoke;
     font-size: 50px;
-}
-
-.custom-toggler {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-
 }

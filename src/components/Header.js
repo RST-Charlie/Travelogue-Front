@@ -20,11 +20,15 @@ const Header = ({ currentUser, logout }) => {
 
     return (
         <>
-            <Navbar className="navbar__header navbar-expand-md" dark="true">
+            <Navbar 
+                className="navbar__header 
+                    navbar-expand-md" 
+                dark="true"
+            >
                 <NavbarBrand href="/">
                     <img
-                        className='mb-2'
-                        alt="logo"
+                        className='mb-2 logo__header'
+                        alt="RSTech logo, a mountain with a door and clouds around the peak"
                         src={Travelogo}
                         style={{
                             height: "10dvh",
@@ -36,7 +40,12 @@ const Header = ({ currentUser, logout }) => {
                 <div className="links__header">
                     <NavbarToggler onClick={toggle} dark="true"/>
                     <Collapse isOpen={isOpen} navbar>
-                    <Nav className="nav__header navbar-expand-sm me-auto" navbar >
+                    <Nav 
+                        className="
+                            nav__header 
+                            me-auto" 
+                        navbar 
+                    >
                         {currentUser && (
                             <>
                                 <NavItem className="mr-auto">
@@ -72,7 +81,9 @@ const Header = ({ currentUser, logout }) => {
                         )}
 
                         <NavItem>
-                            <NavLink href="/demotrips">Adventures</NavLink>
+                            <NavLink href="/demotrips">
+                                Adventures
+                            </NavLink>
                         </NavItem>
                     </Nav>
                     </Collapse>

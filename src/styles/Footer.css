@@ -5,15 +5,15 @@
     color: rgb(255, 255, 255);
 }
 
-.footer-toggler-icon {
-    background-color: var(--indigo);
+.toggler-icon__footer {
+    background-color: var(--trans-indigo);
     color: rgb(255, 255, 255);
     
 }
 
-.footer-toggler-items {
+.toggler-items__footer {
     color: whitesmoke;
-    background-color: var(--indigo);
+    background-color: var(--trans-indigo);
     width:fit-content;
     border-radius: 2dvw;
 }

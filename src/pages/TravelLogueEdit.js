@@ -44,7 +44,7 @@ const TravelLogueEdit = ({ trips, updateTrip, deleteTrip, currentUser }) => {
      
     return (
         <>
-            <Form className="edit-trip-form mx-5 mt-5">
+            <Form className="no-touchy mx-5 my-3">
                 <FormGroup>
                     <Label for="user_id" hidden>
                         User Id
@@ -58,9 +58,9 @@ const TravelLogueEdit = ({ trips, updateTrip, deleteTrip, currentUser }) => {
                     />
                 </FormGroup>
                 <Row>
-                    <Col className="form-group md-4">
+                    <Col className="md-4">
                         <FormGroup>
-                            <Label for="trip-title" className="form-label text-white">
+                            <Label for="trip-title" className="text-white">
                                 Title*:
                             </Label>
                             <Input
@@ -74,9 +74,9 @@ const TravelLogueEdit = ({ trips, updateTrip, deleteTrip, currentUser }) => {
                         </FormGroup>
                     </Col>
 
-                    <Col className="form-group col col-md-4">
+                    <Col className="col col-md-4">
                         <FormGroup>
-                            <Label for="trip-photo" className="form-label text-white">
+                            <Label for="trip-photo" className="text-white">
                                 Photo:
                             </Label>
                             <Input
@@ -92,9 +92,9 @@ const TravelLogueEdit = ({ trips, updateTrip, deleteTrip, currentUser }) => {
                 </Row>
 
                 <Row>
-                    <Col className="form-group md-4">
+                    <Col className="md-4">
                         <FormGroup>
-                            <Label for="trip-city" className="form-label text-white">
+                            <Label for="trip-city" className="text-white">
                                 City:
                             </Label>
                             <Input
@@ -108,9 +108,9 @@ const TravelLogueEdit = ({ trips, updateTrip, deleteTrip, currentUser }) => {
                         </FormGroup>
                     </Col>
 
-                    <Col className="form-group col col-md-4">
+                    <Col className="col col-md-4">
                         <FormGroup>
-                            <Label for="trip-state" className="form-label text-white">
+                            <Label for="trip-state" className="text-white">
                                 State:
                             </Label>
                             <Input
@@ -124,9 +124,9 @@ const TravelLogueEdit = ({ trips, updateTrip, deleteTrip, currentUser }) => {
                         </FormGroup>
                     </Col>
 
-                    <Col className="form-group col col-md-4">
+                    <Col className="col col-md-4">
                         <FormGroup>
-                            <Label for="trip-country" className="form-label text-white">
+                            <Label for="trip-country" className="text-white">
                                 Country*:
                             </Label>
                             <Input
@@ -144,9 +144,9 @@ const TravelLogueEdit = ({ trips, updateTrip, deleteTrip, currentUser }) => {
                 </Row>
 
                 <Row>
-                    <Col className="form-group md-4">
+                    <Col className="md-4">
                         <FormGroup>
-                            <Label for="trip-region" className="form-label text-white">
+                            <Label for="trip-region" className="text-white">
                                 Region*:
                             </Label>
                             <Input
@@ -162,9 +162,9 @@ const TravelLogueEdit = ({ trips, updateTrip, deleteTrip, currentUser }) => {
                         </FormGroup>
                     </Col>
 
-                    <Col className="form-group">
+                    <Col>
                         <FormGroup switch className='mt-4'>
-                            <Label check for="trip-international" className="form-label text-white">
+                            <Label check for="trip-international" className="text-white">
                                 International?
                             </Label>
                             <Input
@@ -178,9 +178,9 @@ const TravelLogueEdit = ({ trips, updateTrip, deleteTrip, currentUser }) => {
                         </FormGroup>                    
                     </Col>
 
-                    <Col className="form-group">
+                    <Col>
                         <FormGroup>
-                            <Label for="trip-start_date" className="form-label text-white">
+                            <Label for="trip-start_date" className="text-white">
                                 Start date:
                             </Label>
                             <Input
@@ -194,9 +194,9 @@ const TravelLogueEdit = ({ trips, updateTrip, deleteTrip, currentUser }) => {
                         </FormGroup>                    
                     </Col>
 
-                    <Col className="form-group">
+                    <Col>
                         <FormGroup>
-                            <Label for="trip-end_date" className="form-label text-white">
+                            <Label for="trip-end_date" className="text-white">
                                 End date:
                             </Label>
                             <Input
@@ -214,7 +214,7 @@ const TravelLogueEdit = ({ trips, updateTrip, deleteTrip, currentUser }) => {
                 <Row>
                     <Col className='text-center'>
                         <FormGroup>
-                            <Label for="trip-entry" className="form-label text-white">
+                            <Label for="trip-entry" className="text-white">
                                 Entry*:
                             </Label>
                             <Input
@@ -231,15 +231,19 @@ const TravelLogueEdit = ({ trips, updateTrip, deleteTrip, currentUser }) => {
 
                 <Row>
                     <Col className='text-center'>
-                        <Button onClick={handleClick}>
+                        <Button onClick={handleClick} 
+                            className='btn-details__edit'>
                             Confirm Changes!
                         </Button>
-                        <Button onClick={handleDelete}>
+                        <Button onClick={handleDelete} 
+                            className='btn-details__delete'
+                        >
                             Delete Trip
                         </Button>
                     </Col>
                 </Row>
             </Form>
+            <br />
         </>
     );
 }

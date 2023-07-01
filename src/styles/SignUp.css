@@ -1,17 +1,11 @@
-.signup-statement {
+.header__signup {
     display: flex;
     margin-top: 3dvh;
     margin-left: 3dvh;
     width: 100%; 
 }
-.signup {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 2vh;
-}
-  
-.signup-title {
+
+.title__signup {
     background-color: var(--indigo);
     color: whitesmoke;
     font-size: 30px;
@@ -24,11 +18,19 @@
     text-align: center;
     justify-content: center;
 }
-  
-.banner {
+
+.banner__signup {
     font-size: 60px;
     color: white;
 }
+
+.form__signup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2vh;
+}
+  
   
 form:not(.no-touchy) {
     display: flex;
@@ -48,11 +50,11 @@ label:not(.no-touchy) {
   
 input[type="email"],
 input[type="password"] {
-    padding: 10px;
+    padding: 2dvh;
     width: 100%;
     border: none;
     border-radius: 20px; 
-    background-color: var(--purple);
+    background-color: #dacbf8;
     color: white;
 }
   
@@ -62,22 +64,22 @@ input[type="password"]::placeholder {
 }
   
 input[type="submit"] {
-    background-color: #5bc0de;
+    background-color: var(--indigo);
     color: white;
     border: none;
     border-radius: 20px; 
     padding: 10px 20px;
-    cursor: pointer;
-}
-
-.submit-signup {
-    color:white;
     font-size:25px;
-    border-radius: 25px;
+    cursor: pointer;
     width: fit-content;
 }
 
-.login-link {
+input[type="submit"]:hover {
+    background-color: var(--purple);
+    transform: translateY(-2px);
+}
+
+.link__to-login {
     font-size:18px;
     color:whitesmoke;
 }

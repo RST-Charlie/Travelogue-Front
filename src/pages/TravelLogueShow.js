@@ -24,13 +24,11 @@ const TravelLogueShow = ({trips}) => {
                 </h1>
             </Container>
             <main
-                className='mx-auto my-5'
-                style={{ 
-                    display: "flex",
-                    flexDirection:"row", 
-                    flexWrap: "wrap",
-                    justifyContent:"center"
-                }}
+                className='
+                mx-auto my-5
+                d-flex
+                flex-wrap
+                justify-content-center'
             >
                 {currentTrip && (
                     <>
@@ -73,30 +71,17 @@ const TravelLogueShow = ({trips}) => {
                             >
                                 <Button 
                                     className="
-                                        btn-details 
                                         my-3 
                                         text-center"
-                                    color='secondary'
                                     disabled
                                 >   
                                     Edit travelogue
                                 </Button>
                                 <Button 
                                     className="
-                                        btn-details 
+                                        btn-details__index 
                                         my-3 
                                         text-center"
-                                    color='secondary'
-                                    disabled
-                                >   
-                                    Delete travelogue
-                                </Button>
-                                <Button 
-                                    className="
-                                        btn-details 
-                                        my-3 
-                                        text-center"
-                                    color='secondary'
                                     href={`/demotrips`}
                                 >   
                                     Back to all

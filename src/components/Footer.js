@@ -21,10 +21,15 @@ const Footer = () => {
                 footer"
                 dark
             >
-                <NavbarToggler onClick={toggleNavbar} className='footer-toggler-icon order-2' dark="true" data-testid="navbar-toggler"
+                <NavbarToggler onClick={toggleNavbar} 
+                    className='toggler-icon__footer order-2' 
+                    dark="true" 
+                    data-testid="navbar-toggler"
                 />
                 <Collapse isOpen={!collapsed} navbar>
-                    <Nav navbar className='footer-toggler-items p-3'>
+                    <Nav navbar 
+                        className='toggler-items__footer p-3'
+                    >
                         <NavItem>
                             <NavLink 
                                 href="mailto: rstcharlie2023@yahoo.com"

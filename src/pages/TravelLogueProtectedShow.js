@@ -24,13 +24,11 @@ const TravelLogueProtectedShow = ({ currentUser, trips}) => {
                 </h1>
             </Container>
             <main
-                className='mx-auto my-5'
-                style={{ 
-                    display: "flex",
-                    flexDirection:"row", 
-                    flexWrap: "wrap",
-                    justifyContent:"center"
-                }}
+                className='
+                mx-auto my-5
+                d-flex
+                flex-wrap
+                justify-content-center'
             >
                 {currentTrip && (
                     <>
@@ -73,14 +71,23 @@ const TravelLogueProtectedShow = ({ currentUser, trips}) => {
                             >
                                 <Button 
                                     className="
-                                        btn-details 
+                                        btn-details-edit__proshow
                                         my-3 
                                         text-center"
-                                    color='secondary'
                                     href={`/changetrips/${currentTrip.id}`}
                                 >   
                                     Edit travelogue
                                 </Button>
+                                <Button 
+                                    className="
+                                        btn-details-back__proshow 
+                                        my-3 
+                                        text-center"
+                                    href={`/demotrips`}
+                                >   
+                                    Back to all
+                                </Button>
+
                             </div>
                         </Card>
                     </>
