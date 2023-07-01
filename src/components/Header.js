@@ -1,6 +1,6 @@
-import React from 'react';
-import { Navbar, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
-import Airplane from '../assets/airplanelogo.png';
+import React, { useState } from 'react';
+import { Navbar, NavbarBrand, Nav, NavItem, NavLink, NavbarToggler, Collapse } from 'reactstrap';
+import Travelogo from '../assets/Travelogo.png';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Header.css';
 
@@ -13,32 +13,46 @@ const Header = ({ currentUser, logout }) => {
         navigate('/');
     };
 
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggle = () => setIsOpen(!isOpen);
+  
+
     return (
         <>
-            <Navbar className="navbar">
+            <Navbar className="navbar__header navbar-expand-sm" dark="true">
                 <NavbarBrand href="/">
                     <img
+                        className='mb-2'
                         alt="logo"
-                        src={Airplane}
+                        src={Travelogo}
                         style={{
-                            height: 40,
-                            width: 40,
+                            height: "10dvh",
+                            width: "auto",
                         }}
                     />
                     RSTech
                 </NavbarBrand>
-                <div className="links">
-                    <Nav className="nav m1-auto">
+                <div className="links__header">
+                    <NavbarToggler onClick={toggle} dark="true"/>
+                    <Collapse isOpen={isOpen} navbar>
+                    <Nav className="nav__header navbar-expand-sm me-auto" navbar >
                         {currentUser && (
                             <>
                                 <NavItem className="mr-auto">
-                                    <NavLink onClick={handleClick}>Log Out</NavLink>
+                                    <NavLink onClick={handleClick}>
+                                        Log Out
+                                    </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink href="/addtrip">Add Trip</NavLink>
+                                    <NavLink href="/addtrip">
+                                        Add Trip
+                                    </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink href="/mytrips">My Trips</NavLink>
+                                    <NavLink href="/mytrips">
+                                        My Trips
+                                    </NavLink>
                                 </NavItem>
                             </>
                         )}
@@ -61,6 +75,7 @@ const Header = ({ currentUser, logout }) => {
                             <NavLink href="/demotrips">Adventures</NavLink>
                         </NavItem>
                     </Nav>
+                    </Collapse>
                 </div>
             </Navbar>
         </>

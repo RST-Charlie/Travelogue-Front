@@ -147,7 +147,7 @@ const App = () => {
 
     return (
 
-        <div className="App">
+        <div className="App gradient-background">
             <Header currentUser={currentUser} logout={logout}/>
             
         <Routes>
