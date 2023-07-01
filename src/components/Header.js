@@ -20,7 +20,7 @@ const Header = ({ currentUser, logout }) => {
 
     return (
         <>
-            <Navbar className="navbar__header navbar-expand-sm" dark="true">
+            <Navbar className="navbar__header navbar-expand-md" dark="true">
                 <NavbarBrand href="/">
                     <img
                         className='mb-2'

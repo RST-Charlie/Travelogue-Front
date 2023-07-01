@@ -33,7 +33,13 @@ const Login = ({ login }) => {
                     animate__animated 
                     animate__slideInUp"
             >
-                <p className="login-banner animate__animated animate__fadeInLeft">
+                <p className="signup-title">
+                    Start logging with us
+                </p>
+
+                <p className="login-banner 
+                        animate__animated 
+                        animate__fadeInLeft">
                     See your adventures
                 </p>
             </div>
@@ -43,7 +49,7 @@ const Login = ({ login }) => {
                     animate__animated 
                     animate__slideInUp"
             >
-                {!loggedIn ? (
+                {!loggedIn? (
                     <form ref={formRef} onSubmit={handleSubmit}>
                         <label>
                             Email:
@@ -64,7 +70,7 @@ const Login = ({ login }) => {
                         <input 
                             type="submit" 
                             value="Login" 
-                            className="submit-button" 
+                            className="submit-login" 
                         />
                     </form>
                 ) : (
@@ -79,8 +85,8 @@ const Login = ({ login }) => {
                     </div>
                 )}
                 <br />
-                <div className="login-link">
-                    Not registered yet, 
+                <div className="signup-link text-center">
+                    Not registered yet? <br /> 
                     <a href="/signup">
                         Sign Up.
                     </a>

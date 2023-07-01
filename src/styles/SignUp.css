@@ -1,16 +1,24 @@
+.signup-statement {
+    display: flex;
+    margin-top: 3dvh;
+    margin-left: 3dvh;
+    width: 100%; 
+}
 .signup {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 3vh;
+    padding-top: 2vh;
 }
   
 .signup-title {
-    padding-bottom: 5vw;
-    background-color: #5e17eb;
-    width: 30%;
-    padding: 10px;
-    border-radius: 20vw;
+    background-color: var(--indigo);
+    color: whitesmoke;
+    font-size: 30px;
+    width: fit-content ;
+    padding: 2dvw;
+    margin-right: 2dvw;
+    border-radius: 5dvw;
     display: flex;
     align-items: center;
     text-align: center;
@@ -18,39 +26,24 @@
 }
   
 .banner {
-    font-size: 8vw;
+    font-size: 60px;
     color: white;
 }
   
-.signup-statement {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
-    padding-left: 4vw;
-    width: 100%; 
-}
-  
-.statement {
-    font-size: 4vw;
-    color: white;
-    text-align: center;
-}
-  
-form {
+form:not(.no-touchy) {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 80%; 
-    margin-top: 20px; 
 }
   
-label {
+label:not(.no-touchy) {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 10px;
     color:white;
-    font-size:2vw;
+    font-size:16px;
 }
   
 input[type="email"],
@@ -58,33 +51,33 @@ input[type="password"] {
     padding: 10px;
     width: 100%;
     border: none;
-    border-radius: 25px; 
-    background-color: #5e17eb;
+    border-radius: 20px; 
+    background-color: var(--purple);
     color: white;
 }
   
 input[type="email"]::placeholder,
 input[type="password"]::placeholder {
-    color: white;
+    color: var(--indigo);
 }
   
 input[type="submit"] {
-    background-color: #5e17eb;
+    background-color: #5bc0de;
     color: white;
     border: none;
     border-radius: 20px; 
     padding: 10px 20px;
-    margin-top: 10px;
     cursor: pointer;
 }
 
-.login-link{
-    font-size:1.7vw;
-}
-
-.submit{
-    font-size:2vw;
+.submit-signup {
+    color:white;
+    font-size:25px;
     border-radius: 25px;
     width: fit-content;
 }
-  
+
+.login-link {
+    font-size:18px;
+    color:whitesmoke;
+}

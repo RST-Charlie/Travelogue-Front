@@ -57,7 +57,7 @@ const TravelLogueIndex = ({trips}) => {
                                     align-items-center
                                     text-center">
                                 <Button 
-                                    className="btn-details mt-3 text-center"
+                                    className="mt-3 text-center"
                                     color="info"
                                     href={`/demotrips/${trip.id}`}
                                 >   

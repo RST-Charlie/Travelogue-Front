@@ -28,23 +28,21 @@ const SignUp = ({ signup }) => {
                     animate__animated 
                     animate__fadeInLeft"
             >
+                <p className="signup-title">
+                    Start logging with us
+                </p>
                 <p className="banner">
                     Embark on new adventures
-                </p>
-                <p className="statement">
-                    Start logging with us
                 </p>
             </div>
             <div 
                 className="animate__animated animate__slideInUp signup" 
                 data-testid="signup-component"
             >
-                <p className="signup-title">
-                    Sign Up
-                </p>
                 <form 
                     ref={formRef} 
                     onSubmit={handleSubmit}
+                    className="form__signup"
                 >
                     <label>
                         Email:
@@ -74,7 +72,7 @@ const SignUp = ({ signup }) => {
                     <input 
                         type="submit" 
                         value="Submit" 
-                        className="submit" 
+                        className="submit-signup" 
                     />
                 </form>
                 <br />
@@ -86,6 +84,7 @@ const SignUp = ({ signup }) => {
                     here.
                 </div>
             </div>
+            <br />
         </>
     );
 };

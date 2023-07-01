@@ -23,8 +23,8 @@ body {
 }
 
 .gradient-background {
-background: linear-gradient(90deg, var(--purple), var(--orange), var(--indigo));
-background-size: 400% 400%;
+background: linear-gradient(90deg, var(--purple), var(--orange), #18a5b8);
+background-size: 400dvh 400dvh;
 animation: gradientAnimation 20s ease-in-out infinite;
 }
 
