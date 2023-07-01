@@ -19,7 +19,7 @@
 
 .move-image__home {
     animation: moveImage 30s linear infinite;
-    height: 50dvw;
+    height: clamp(200px, 50dvw, 600px);
     margin-top: 18dvh;
     margin-right: 15dvw;
 }
