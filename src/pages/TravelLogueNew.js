@@ -151,7 +151,7 @@ const TravelLogueNew = ({ currentUser, createTrip }) => {
                 </Row>
 
                 <Row>
-                    <Col className="fmd-4">
+                    <Col>
                         <FormGroup>
                             <Label for="trip-region" className="ftext-white">
                                 Region*:
@@ -170,7 +170,7 @@ const TravelLogueNew = ({ currentUser, createTrip }) => {
                         </FormGroup>
                     </Col>
 
-                    <Col className="">
+                    <Col>
                         <FormGroup switch className='d-flex flex-wrap mt-3'>
                             <Label check for="trip-international" className="mt-4 text-white">
                                 International?
@@ -187,7 +187,7 @@ const TravelLogueNew = ({ currentUser, createTrip }) => {
                         </FormGroup>       
                     </Col>
 
-                    <Col className="">
+                    <Col>
                         <FormGroup>
                             <Label for="trip-start_date" className="form-label text-white">
                                 Start date:
@@ -203,7 +203,7 @@ const TravelLogueNew = ({ currentUser, createTrip }) => {
                         </FormGroup>                    
                     </Col>
 
-                    <Col className="">
+                    <Col>
                         <FormGroup>
                             <Label for="trip-end_date" className=" text-white">
                                 End date:

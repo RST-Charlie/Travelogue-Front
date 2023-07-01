@@ -1,8 +1,8 @@
 import ani from "./assets/ani.jpeg"
 import ob from "./assets/sandy_eggos.jpeg"
-import aussie from "./assets/not_quite_australia.jpeg"
-import bahamas from "./assets/not_quite_bahamian.jpeg"
-import hi from "./assets/not_quite_hawaii.jpeg"
+import aussie from "./assets/austrailia.jpeg"
+import bahamas from "./assets/bahamas.jpg"
+import hi from "./assets/hawaii.webp"
 
 let mockTrips = [
     {
