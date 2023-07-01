@@ -20,8 +20,9 @@
 .move-image__home {
     animation: moveImage 30s linear infinite;
     height: clamp(200px, 50dvw, 600px);
-    margin-top: 18dvh;
+    margin-top: 15dvh;
     margin-right: 15dvw;
+    margin-bottom: 7dvh;
 }
 
 @keyframes moveImage {
