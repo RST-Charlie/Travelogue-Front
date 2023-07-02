@@ -34,7 +34,7 @@ const AboutUs = () => {
                 <Card
                     hover
                     style={{
-                        width:"18dvw",
+                        width:"19dvw",
                     }}
                     className='my-2 mx-2 shadow-5 card__about-us'
                 >
@@ -53,8 +53,8 @@ const AboutUs = () => {
                         <p>Tech Lead/Anchor</p>
                         <p className='text__about-us'> Assumes responsibility for the code base and version control, ensuring its integrity and efficient management throughout the project. </p>
                     </CardBody>
-                    <CardFooter className="text-center mx-auto" >
-                        <a href="https://www.linkedin.com/in/sarah-m-cherry/">
+                    <CardFooter className="text-center" >
+                        <a href="https://www.linkedin.com/in/sarah-m-cherry/" target="blank" class="test">
                             <span>
                             <img src={linkedin} width="35" height="35" border="0" 
                         />
@@ -78,7 +78,7 @@ const AboutUs = () => {
                 <Card
                     hover
                     style={{
-                        width:"18dvw",
+                        width:"19dvw",
                     }}
                     className='my-2 mx-2 shadow-5 card__about-us'
                 >
@@ -96,7 +96,7 @@ const AboutUs = () => {
                         <p className='text__about-us'> Has ownership of the project's aesthetics, color scheme, and branding, ensuring a cohesive and visually appealing experience for users. </p>
                     </CardBody>
                     <CardFooter className='text-center'>
-                        <a href="https://www.linkedin.com/in/surielis-rodriguez/">
+                        <a href="https://www.linkedin.com/in/surielis-rodriguez/" target="blank" class="test">
                             <span>
                             <img src={linkedin} width="35" height="35" border="0" 
                         />
@@ -120,7 +120,7 @@ const AboutUs = () => {
                 <Card
                     hover
                     style={{
-                        width:"18dvw",
+                        width:"19dvw",
                     }}
                     className='my-2 mx-2 shadow-5 card__about-us'
                 >
@@ -139,8 +139,8 @@ const AboutUs = () => {
                         <p>Product Manager</p>
                         <p className='text__about-us'>  Controls the overarching vision of the product, ensuring that it aligns with the requirements and specifications to deliver a successful outcome. </p>
                     </CardBody>
-                    <CardFooter className="text-center mx-auto" >
-                        <a href="https://www.linkedin.com/in/scott-tuschl/">
+                    <CardFooter className="text-center" >
+                        <a href="https://www.linkedin.com/in/scott-tuschl/" target="blank" class="test">
                             <span>
                             <img src={linkedin} width="35" height="35" border="0" 
                         />
@@ -164,7 +164,7 @@ const AboutUs = () => {
                 <Card 
                     hover
                     style={{
-                        width:"18dvw",
+                        width:"19dvw",
                     }}
                     className='my-2 mx-2 shadow-5 card__about-us'
                 >
@@ -180,11 +180,11 @@ const AboutUs = () => {
                     />
                     <CardBody>
                         <h2>Ramgel Romo</h2>
-                        <p className="about-us-title">Project Manager</p>
+                        <p>Project Manager</p>
                         <p className='text__about-us'> Responsible for internal team communication, collaboration, and project management oversight for efficient coordination. </p>
                     </CardBody>
-                    <CardFooter className="text-center mx-auto" >
-                        <a href="https://www.linkedin.com/in/romoramgel/">
+                    <CardFooter className="text-center" >
+                        <a href="https://www.linkedin.com/in/romoramgel/" target="blank" class="test">
                             <span>
                             <img src={linkedin} width="35" height="35" border="0" 
                         />
@@ -203,6 +203,7 @@ const AboutUs = () => {
                     </CardFooter>
                 </Card>
             </Container>
+            <br />
         </>
     );
 };
