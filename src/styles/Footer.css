@@ -2,17 +2,17 @@
     transform: translateX(-50%);
     font-size: 20px;
     background-color: "";
-    color: rgb(255, 255, 255);
+    color: white;
 }
 
 .toggler-icon__footer {
     background-color: var(--trans-indigo);
-    color: rgb(255, 255, 255);
+    color: white;
     
 }
 
 .toggler-items__footer {
-    color: whitesmoke;
+    color: white;
     background-color: var(--trans-indigo);
     width:fit-content;
     border-radius: 2dvw;

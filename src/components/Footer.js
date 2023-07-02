@@ -1,8 +1,8 @@
 
-import React from 'react'
+import React from 'react';
 import { useState } from 'react';
 import { Navbar, Nav, NavbarToggler, Collapse, NavItem, NavLink } from 'reactstrap'; 
-import "../styles/Footer.css"
+import "../styles/Footer.css";
 import 'animate.css';
 
 const Footer = () => {
@@ -16,8 +16,8 @@ const Footer = () => {
                 d-flex flex-row justify-content-start
                 p-2 mt-5
                 fixed-bottom
-                animate__animated 
-                animate__slideInUp 
+                animate__animated
+                animate__slideInUp
                 footer"
                 dark
             >
