@@ -14,7 +14,7 @@
 .Navbar a.nav-link:hover,
 .Navbar a.nav-link:focus,
 .Navbar a.navbar-brand:hover,
-.Navbar a.navbar-brand:focus  {
+.Navbar a.navbar-brand:focus {
     color: var(--orange);
 }
 
@@ -22,7 +22,7 @@
     background-color: var(--trans-indigo);
 }
 
-a.nav-link{
+a.nav-link {
     color:whitesmoke;
     font-size: xx-large;
 }

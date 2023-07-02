@@ -54,7 +54,7 @@ input[type="password"] {
     width: 100%;
     border: none;
     border-radius: 20px; 
-    background-color: #dacbf8;
+    background-color: var(--lt-purple);
     color: white;
 }
   

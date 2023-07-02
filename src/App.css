@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
 
 :root {
-    --purple: #8c52ff;
-    --orange: #ff914d;
     --indigo: #5e17eb;
+    --purple: #8c52ff;
+    --lt-purple: #dacbf8;
+    --orange: #ff914d;
     --teal: #12a7bb;
     --red: #a63a3a;
     --white: #ffff;
