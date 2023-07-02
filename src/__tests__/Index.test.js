@@ -1,9 +1,8 @@
 import React from 'react' 
-import { fireEvent, render, screen } from '@testing-library/react';
-import { BrowserRouter, MemoryRouter } from 'react-router-dom';
+import { render, screen } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
 import TravelLogueIndex from '../pages/TravelLogueIndex';
 import mockTrips from '../mockTrips';
-import { Button, Card } from 'reactstrap';
 
 describe('<TravelLogueIndex />', () => {
     beforeEach(() => {

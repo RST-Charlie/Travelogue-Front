@@ -2,7 +2,6 @@ import React from 'react'
 import { fireEvent, render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import TravelLogueNew from '../pages/TravelLogueNew';
-import userEvent from '@testing-library/user-event';
 
 describe('<TravelLogueNew />', () => {
     beforeEach(() => {
