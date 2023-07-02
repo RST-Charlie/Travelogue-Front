@@ -25,10 +25,10 @@ const TravelLogueProtectedShow = ({ currentUser, trips}) => {
             </Container>
             <main
                 className='
-                mx-auto my-5
-                d-flex
-                flex-wrap
-                justify-content-center'
+                    mx-auto my-5
+                    d-flex
+                    flex-wrap
+                    justify-content-center'
             >
                 {currentTrip && (
                     <>
