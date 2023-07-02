@@ -107,7 +107,7 @@ const AboutUs = () => {
                                 <img src={github} width="40" height="40" border="0" />
                             </span> 
                         </a>
-                        <a href="https://sdlearn.slack.com/team/U052MQFBZ9B" target="blank" class="test">
+                        <a href="https://sdlearn.slack.com/team/U0534HN74LE" target="blank" class="test">
                             <span>
                                 <img src={slack} width="35" height="35" border="0" />
                             </span> 
@@ -151,7 +151,7 @@ const AboutUs = () => {
                                 <img src={github} width="40" height="40" border="0" />
                             </span> 
                         </a>
-                        <a href="https://sdlearn.slack.com/team/U052MQFBZ9B" target="blank" class="test">
+                        <a href="https://sdlearn.slack.com/team/U052BV8L1U1" target="blank" class="test">
                             <span>
                                 <img src={slack} width="35" height="35" border="0" />
                             </span> 
@@ -195,7 +195,7 @@ const AboutUs = () => {
                                 <img src={github} width="40" height="40" border="0" />
                             </span> 
                         </a>
-                        <a href="https://sdlearn.slack.com/team/U052MQFBZ9B" target="blank" class="test">
+                        <a href="https://sdlearn.slack.com/team/U053Q2474KT" target="blank" class="test">
                             <span>
                                 <img src={slack} width="35" height="35" border="0" />
                             </span> 

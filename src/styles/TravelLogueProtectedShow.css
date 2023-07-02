@@ -1,3 +1,8 @@
+.image__proshow {
+    width: clamp(200px, 80dvw, 800px);
+    object-fit: contain;
+}
+
 .btn-details-edit__proshow {
     background-color: var(--indigo);
     color: var(--white);

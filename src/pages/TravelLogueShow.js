@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import '../styles/Index.css';
+import '../styles/Show.css'
 import React from "react"
 import { Card, CardImg, CardBody, CardText, CardSubtitle, Button, Container } from "reactstrap"
 
@@ -35,7 +35,7 @@ const TravelLogueShow = ({trips}) => {
                         <CardImg
                             alt="Photo from trip"
                             src={currentTrip.photo}
-                            style={{ width:"80vw", objectFit: "contain"}}
+                            className='image__show'
                         />
                         <Card
                             style={{ width:"80vw" }}
@@ -79,7 +79,7 @@ const TravelLogueShow = ({trips}) => {
                                 </Button>
                                 <Button 
                                     className="
-                                        btn-details__index 
+                                        btn-details-back__show 
                                         my-3 
                                         text-center"
                                     href={`/demotrips`}

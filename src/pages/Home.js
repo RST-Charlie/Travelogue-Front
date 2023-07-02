@@ -28,7 +28,7 @@ const Home = () => {
                 <img 
                     src={Plane} 
                     className="move-image__home" 
-                    alt="Globe Banner"
+                    alt="Plane Banner"
                 />
             </div>
         </>

@@ -35,7 +35,7 @@ const TravelLogueProtectedShow = ({ currentUser, trips}) => {
                         <CardImg
                             alt="Photo from trip"
                             src={currentTrip.photo}
-                            style={{ width:"80vw", objectFit: "contain"}}
+                            className='image__proshow'
                         />
                         <Card
                             style={{ width:"80vw" }}
