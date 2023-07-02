@@ -15,7 +15,7 @@ describe('NotFound Component', () => {
 
     it('applies animation class to display message', () => {
         const { container } = render(<NotFound />);
-        const displayMessage = container.querySelector('.display-msg');
+        const displayMessage = container.querySelector('.display-msg__not-found');
         expect(displayMessage).toHaveClass('animate__animated', 'animate__bounce');
     });
 });
