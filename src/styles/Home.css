@@ -4,23 +4,23 @@
 
 .header__home {
     margin-left: 8dvw;
-    margin-top: 25dvh;
+    margin-top: 20dvh;
 }
 
 .title__home {
-    font-size: 70px;
+    font-size: clamp(50px, 50dvh, 120px);
     color:white;
 }
 
 .mission__home {
     color:white;
-    font-size:20px
+    font-size: clamp(20px, 8dvh, 40px);
 }
 
 .move-image__home {
     animation: moveImage 30s linear infinite;
     height: clamp(200px, 50dvw, 600px);
-    margin-top: 15dvh;
+    margin-top: 12dvh;
     margin-right: 15dvw;
     margin-bottom: 7dvh;
 }
