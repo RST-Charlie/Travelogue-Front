@@ -2,7 +2,6 @@ import React from 'react';
 import "../styles/Home.css"
 import Plane from "../assets/planebanner.png"
 import Globe from "../assets/logo-globe.png"
-import Phone from "../assets/logo-phone.png"
 import Logo from "../assets/Travelogo.png"
 import 'animate.css';
 
