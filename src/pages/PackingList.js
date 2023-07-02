@@ -22,9 +22,9 @@ const PackingList = () => {
     };
 
     return (
-        <div className="packing-list-container">
-            <h2 className="packing-list-header">Packing List</h2>
-            <div className="packing-list-form">
+        <div className="container__packing-list">
+            <h2 className="header__packing-list">Packing List</h2>
+            <div className="form__packing-list">
                 <input
                     type="text"
                     value={newItem}
@@ -33,9 +33,9 @@ const PackingList = () => {
                 />
                 <button onClick={addItem}>Add</button>
             </div>
-            <ul className="packing-list-items">
+            <ul className="items__packing-list">
                 {items.map((item, index) => (
-                    <li className="packing-list-item" key={index}>
+                    <li className="item__packing-list" key={index}>
                         <span>{item}</span>
                         <button onClick={() => removeItem(index)}>Remove</button>
                     </li>

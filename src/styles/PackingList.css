@@ -1,4 +1,4 @@
-.packing-list-container {
+.container__packing-list {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -7,16 +7,16 @@
     background-color: #fff;
 }
 
-.packing-list-header {
+.header__packing-list {
     font-size: 24px;
     margin-bottom: 20px;
 }
 
-.packing-list-form {
+.form__packing-list {
     margin-bottom: 20px;
 }
 
-.packing-list-form input {
+.form__packing-list input {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
@@ -25,7 +25,7 @@
     border-radius: 4px;
 }
 
-.packing-list-form button {
+.form__packing-list button {
     padding: 10px 20px;
     font-size: 16px;
     background-color: #4caf50;
@@ -35,12 +35,12 @@
     cursor: pointer;
 }
 
-.packing-list-items {
+.items__packing-list {
     list-style-type: none;
     padding: 0;
 }
 
-.packing-list-item {
+.item__packing-list {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -51,7 +51,7 @@
     padding: 10px;
 }
 
-.packing-list-item button {
+.item__packing-list button {
     padding: 5px 10px;
     font-size: 14px;
     background-color: #f44336;
