@@ -48,11 +48,6 @@ const Header = ({ currentUser, logout }) => {
                     >
                         {currentUser && (
                             <>
-                                <NavItem className="mr-auto">
-                                    <NavLink onClick={handleClick}>
-                                        Log Out
-                                    </NavLink>
-                                </NavItem>
                                 <NavItem>
                                     <NavLink href="/addtrip">
                                         Add Trip
@@ -64,15 +59,27 @@ const Header = ({ currentUser, logout }) => {
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink href="/PackingList">My List</NavLink>
+                                    <NavLink href="/PackingList">
+                                        My List
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="/demotrips">
+                                        Adventures
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem className="mr-auto">
+                                    <NavLink onClick={handleClick}>
+                                        Log Out
+                                    </NavLink>
                                 </NavItem>
                             </>
                         )}
                         {!currentUser && (
                             <>
                                 <NavItem>
-                                    <NavLink href="/login">
-                                        Sign In
+                                    <NavLink href="/demotrips">
+                                        Adventures
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
@@ -80,14 +87,14 @@ const Header = ({ currentUser, logout }) => {
                                         Sign Up
                                     </NavLink>
                                 </NavItem>
+                                <NavItem>
+                                    <NavLink href="/login">
+                                        Log In
+                                    </NavLink>
+                                </NavItem>
                             </>
                         )}
 
-                        <NavItem>
-                            <NavLink href="/demotrips">
-                                Adventures
-                            </NavLink>
-                        </NavItem>
                     </Nav>
                     </Collapse>
                 </div>
