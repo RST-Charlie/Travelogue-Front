@@ -8,28 +8,30 @@
     z-index: 0;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     padding: 20px;
 }
   
-.display-msg {
+.display-msg__not-found {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #5e17eb;
+    padding: 3dvw;
+    color: var(--indigo);
+    background-color: var(--trans-green);
     font-weight: bolder;
 }
   
-.text {
+.text__not-found {
     z-index: 1;
-    font-size: 15vw;
+    font-size: clamp(20px, 15vw, 100px);
     text-align: center;
     margin-bottom: 10px;
 }
   
-.message {
-    font-size: 5vw;
+.message__not-found {
+    font-size: clamp(14px, 5vw, 60px);
     text-align: center;
 }
   

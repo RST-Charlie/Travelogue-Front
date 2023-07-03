@@ -1,13 +1,32 @@
-.btn-details {
-    background-color: #ff7926;
-    color: #f0e9ff;
+.image__proshow {
+    width: clamp(200px, 80dvw, 800px);
+    object-fit: contain;
+}
+
+.btn-details-edit__proshow {
+    background-color: var(--indigo);
+    color: var(--white);
     border: none;
     padding: 8px 16px;
     transition: transform 0.3s ease;
 }
 
-.btn-details:hover {
+.btn-details-edit__proshow:hover {
     transform: translateY(-2px);
-    background-color: #dd5704;
-    color: #fff;
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+.btn-details-back__proshow {
+    background-color: var(--purple);
+    color: var(--white);
+    border: none;
+    padding: 8px 16px;
+    transition: transform 0.3s ease;
+}
+
+.btn-details-back__proshow:hover {
+    transform: translateY(-2px);
+    background-color: var(--indigo);
+    color: var(--white);
 }

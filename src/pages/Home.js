@@ -1,6 +1,8 @@
 import React from 'react';
 import "../styles/Home.css"
 import Plane from "../assets/planebanner.png"
+import Globe from "../assets/logo-globe.png"
+import Logo from "../assets/Travelogo.png"
 import 'animate.css';
 
 const Home = () => {
@@ -8,19 +10,24 @@ const Home = () => {
     return (
         <>
             <div className="home">
-                <div className='logo-mission'>
-                    <p className='animate__animated animate__slideInUp title' >
+                <div className='header__home'>
+                    <p className='
+                        animate__animated 
+                        animate__slideInUp 
+                        title__home' >
                         Travelogue
                     </p>
-                    <p  className="animate__animated animate__slideInUp mission" >
+                    <p  className="
+                        animate__animated 
+                        animate__slideInUp 
+                        mission__home" >
                         Track your globetrotting adventures and conquer the
-                    <br />
                         world, one destination at a time.
                     </p>
                 </div>
                 <img 
                     src={Plane} 
-                    className="move-image" 
+                    className="move-image__home" 
                     alt="Plane Banner"
                 />
             </div>

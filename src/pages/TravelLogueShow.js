@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import '../styles/Index.css';
+import '../styles/Show.css'
 import React from "react"
 import { Card, CardImg, CardBody, CardText, CardSubtitle, Button, Container } from "reactstrap"
 
@@ -24,20 +24,18 @@ const TravelLogueShow = ({trips}) => {
                 </h1>
             </Container>
             <main
-                className='mx-auto my-5'
-                style={{ 
-                    display: "flex",
-                    flexDirection:"row", 
-                    flexWrap: "wrap",
-                    justifyContent:"center"
-                }}
+                className='
+                    mx-auto my-5
+                    d-flex
+                    flex-wrap
+                    justify-content-center'
             >
                 {currentTrip && (
                     <>
                         <CardImg
                             alt="Photo from trip"
                             src={currentTrip.photo}
-                            style={{ width:"80vw", objectFit: "contain"}}
+                            className='image__show'
                         />
                         <Card
                             style={{ width:"80vw" }}
@@ -73,30 +71,17 @@ const TravelLogueShow = ({trips}) => {
                             >
                                 <Button 
                                     className="
-                                        btn-details 
                                         my-3 
                                         text-center"
-                                    color='secondary'
                                     disabled
                                 >   
                                     Edit travelogue
                                 </Button>
                                 <Button 
                                     className="
-                                        btn-details 
+                                        btn-details-back__show 
                                         my-3 
                                         text-center"
-                                    color='secondary'
-                                    disabled
-                                >   
-                                    Delete travelogue
-                                </Button>
-                                <Button 
-                                    className="
-                                        btn-details 
-                                        my-3 
-                                        text-center"
-                                    color='secondary'
                                     href={`/demotrips`}
                                 >   
                                     Back to all

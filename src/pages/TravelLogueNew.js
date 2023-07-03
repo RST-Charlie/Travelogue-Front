@@ -3,6 +3,7 @@ import { Form, FormGroup, Label, Input, Button, Row, Col, Alert } from "reactstr
 import countries from '../components/Countries'
 import regions from '../components/Regions'
 import { useNavigate } from 'react-router-dom'
+import '../styles/New.css'
 
 const TravelLogueNew = ({ currentUser, createTrip }) => {
     const [newTrip, setNewTrip] = useState({
@@ -50,7 +51,7 @@ const TravelLogueNew = ({ currentUser, createTrip }) => {
 
     return (
         <>
-            <Form className="new-trip-form mx-4 mt-3">
+            <Form className="no-touchy mx-5 my-3">
                 <FormGroup>
                     <Label for="user_id" hidden>
                         User Id
@@ -64,9 +65,9 @@ const TravelLogueNew = ({ currentUser, createTrip }) => {
                     />
                 </FormGroup>
                 <Row>
-                    <Col className="form-group md-4">
+                    <Col className="md-4">
                         <FormGroup>
-                            <Label for="trip-title" className="form-label text-white">
+                            <Label for="trip-title" className="text-white">
                                 Title*:
                             </Label>
                             <Input
@@ -80,9 +81,9 @@ const TravelLogueNew = ({ currentUser, createTrip }) => {
                         </FormGroup>
                     </Col>
 
-                    <Col className="form-group col col-md-4">
+                    <Col className="col col-md-4">
                         <FormGroup>
-                            <Label for="trip-photo" className="form-label text-white">
+                            <Label for="trip-photo" className="text-white">
                                 Photo:
                             </Label>
                             <Input
@@ -98,9 +99,9 @@ const TravelLogueNew = ({ currentUser, createTrip }) => {
                 </Row>
 
                 <Row>
-                    <Col className="form-group md-4">
+                    <Col className="md-4">
                         <FormGroup>
-                            <Label for="trip-city" className="form-label text-white">
+                            <Label for="trip-city" className="text-white">
                                 City:
                             </Label>
                             <Input
@@ -114,9 +115,9 @@ const TravelLogueNew = ({ currentUser, createTrip }) => {
                         </FormGroup>
                     </Col>
 
-                    <Col className="form-group col col-md-4">
+                    <Col className="col col-md-4">
                         <FormGroup>
-                            <Label for="trip-state" className="form-label text-white">
+                            <Label for="trip-state" className="text-white">
                                 State:
                             </Label>
                             <Input
@@ -130,9 +131,9 @@ const TravelLogueNew = ({ currentUser, createTrip }) => {
                         </FormGroup>
                     </Col>
 
-                    <Col className="form-group col col-md-4">
+                    <Col className="col col-md-4">
                         <FormGroup>
-                            <Label for="trip-country" className="form-label text-white">
+                            <Label for="trip-country" className="text-white">
                                 Country*:
                             </Label>
                             <Input
@@ -151,9 +152,9 @@ const TravelLogueNew = ({ currentUser, createTrip }) => {
                 </Row>
 
                 <Row>
-                    <Col className="form-group md-4">
+                    <Col>
                         <FormGroup>
-                            <Label for="trip-region" className="form-label text-white">
+                            <Label for="trip-region" className="text-white">
                                 Region*:
                             </Label>
                             <Input
@@ -170,9 +171,9 @@ const TravelLogueNew = ({ currentUser, createTrip }) => {
                         </FormGroup>
                     </Col>
 
-                    <Col className="form-group">
-                        <FormGroup switch className='mt-4'>
-                            <Label check for="trip-international" className="form-label text-white">
+                    <Col>
+                        <FormGroup switch className='d-flex flex-wrap mt-3'>
+                            <Label check for="trip-international" className="mt-4 text-white">
                                 International?
                             </Label>
                             <Input
@@ -180,15 +181,16 @@ const TravelLogueNew = ({ currentUser, createTrip }) => {
                                 type="switch"
                                 role='switch'
                                 name="international"
+                                className='mt-0'
                                 checked={newTrip.international}
                                 onChange={handleSwitchChange}
-                                />
-                        </FormGroup>                    
+                            />
+                        </FormGroup>       
                     </Col>
 
-                    <Col className="form-group">
+                    <Col>
                         <FormGroup>
-                            <Label for="trip-start_date" className="form-label text-white">
+                            <Label for="trip-start_date" className="text-white">
                                 Start date:
                             </Label>
                             <Input
@@ -202,9 +204,9 @@ const TravelLogueNew = ({ currentUser, createTrip }) => {
                         </FormGroup>                    
                     </Col>
 
-                    <Col className="form-group">
+                    <Col>
                         <FormGroup>
-                            <Label for="trip-end_date" className="form-label text-white">
+                            <Label for="trip-end_date" className="text-white">
                                 End date:
                             </Label>
                             <Input
@@ -222,7 +224,7 @@ const TravelLogueNew = ({ currentUser, createTrip }) => {
                 <Row>
                     <Col className='text-center'>
                         <FormGroup>
-                            <Label for="trip-entry" className="form-label text-white">
+                            <Label for="trip-entry" className="text-white">
                                 Entry*:
                             </Label>
                             <Input
@@ -240,20 +242,20 @@ const TravelLogueNew = ({ currentUser, createTrip }) => {
                     <Col className='text-center'>
                         <Button
                             onClick={handleClick}
-                            type="button"
-                            className="button bg-primary text-light"
-                            >
+                            className="btn-details__new"
+                        >
                             Add this trip to my Travelogue!
                         </Button>
                     </Col>
                 </Row>
             </Form>
             {error && (
-                <Alert color="danger" className='text-center mx-auto my-2' style={{ width: "50vw" }}>
+                <Alert color="info" className='text-center mx-auto my-4' style={{ width: "50vw" }}>
                     Error!  <br />
                     Please make sure you are logged in and have filled out all required fields: title, entry, country, and region. 
                 </Alert>
             )}
+            <br />
         </>
     );
 }

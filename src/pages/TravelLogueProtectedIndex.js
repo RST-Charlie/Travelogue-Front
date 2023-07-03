@@ -12,7 +12,7 @@ const TravelLogueProtectedIndex = ({ currentUser, trips }) => {
                 flex-wrap
                 justify-content-center
                 align-items-center
-                card-columns-3 
+                card-columns-4 
                 mt-2 px-2 py-2
                 align-items center"
         >
@@ -26,7 +26,7 @@ const TravelLogueProtectedIndex = ({ currentUser, trips }) => {
                             height: "25rem"
                         }}
                         className="
-                            my-card
+                            cards_index
                             each-card
                             my-4 mx-4
                             shadow-5"
@@ -39,12 +39,11 @@ const TravelLogueProtectedIndex = ({ currentUser, trips }) => {
                                 height:"60%",
                                 position:"relative"
                             }}
+                            className="card-img__index"
                         />
 
                         <CardBody className="px-3 py-4">
-                            <CardTitle 
-                                className="card-title"
-                            >
+                            <CardTitle>
                                 {trip.title}
                             </CardTitle>
                             <CardSubtitle
@@ -56,10 +55,13 @@ const TravelLogueProtectedIndex = ({ currentUser, trips }) => {
                                 className="
                                     justify-content-between
                                     align-items-center
-                                    text-center">
+                                    text-center"
+                            >
                                 <Button 
-                                    className="btn-details mt-3 text-center" 
-                                    color="info"
+                                    className="
+                                        btn-details__index 
+                                        mt-3 
+                                        text-center" 
                                     href={`/mytrips/${trip.id}`}
                                 >   
                                     See travelogue

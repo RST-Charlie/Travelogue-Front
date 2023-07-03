@@ -1,21 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
-
 .footer {
     transform: translateX(-50%);
-    font-size: 16px;
+    font-size: 20px;
     background-color: "";
-    color: whitesmoke;
+    color: white;
 }
 
-.footer-toggler-icon {
-    background-color: #5e17eb;
-    color: whitesmoke;
-
+.toggler-icon__footer {
+    background-color: var(--trans-indigo);
+    color: white;
+    
 }
 
-.footer-toggler-items {
-    background-color: #5e17eb;
+.toggler-items__footer {
+    color: white;
+    background-color: var(--trans-indigo);
     width:fit-content;
     border-radius: 2dvw;
 }

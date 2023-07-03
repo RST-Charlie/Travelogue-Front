@@ -27,63 +27,72 @@ const Login = ({ login }) => {
 
     return (
         <>
-            <div id="login" 
-                className="
-                    login-container 
-                    animate__animated 
-                    animate__slideInUp"
-            >
-                <p className="login-banner animate__animated animate__fadeInLeft">
-                    See your adventures
-                </p>
-            </div>
-            <div id="login" 
-                className="
-                    login-container 
-                    animate__animated 
-                    animate__slideInUp"
-            >
-                {!loggedIn ? (
-                    <form ref={formRef} onSubmit={handleSubmit}>
-                        <label>
-                            Email:
-                            <input 
-                                type="email" 
-                                name="email" 
-                                placeholder="Email" 
-                            />
-                        </label>
-                        <label>
-                            Password:
-                            <input 
-                                type="password" 
-                                name="password" 
-                                placeholder="Password" 
-                            />
-                        </label>
-                        <input 
-                            type="submit" 
-                            value="Login" 
-                            className="submit-button" 
-                        />
-                    </form>
-                ) : (
-                    <div>
-                        <p>
-                            You are logged in!
+            <div>
+                <div id="login" 
+                    className="
+                        header__login 
+                        animate__animated 
+                        animate__slideInUp"
+                >
+                    <p className="title__login">
+                        Log your journey
+                    </p>
 
-                        </p>
-                        <button onClick={handleLogout}>
-                            Logout
-                        </button>
+                    <p className="banner__login 
+                            animate__animated 
+                            animate__fadeInLeft"
+                    >
+                        A new trip or a trip through time
+                    </p>
+                </div>
+                <div id="login" 
+                    className="
+                        form__login 
+                        animate__animated 
+                        animate__slideInUp"
+                >
+                    {!loggedIn? (
+                        <form ref={formRef} onSubmit={handleSubmit}>
+                            <label>
+                                Email:
+                                <input 
+                                    type="email" 
+                                    name="email" 
+                                    placeholder="Email" 
+                                />
+                            </label>
+                            <label>
+                                Password:
+                                <input 
+                                    type="password" 
+                                    name="password" 
+                                    placeholder="Password" 
+                                />
+                            </label>
+                            <input 
+                                type="submit" 
+                                value="Login" 
+                                className="submit__login" 
+                            />
+                        </form>
+                    ) : (
+                        <div>
+                            <p>
+                                You are logged in!
+
+                            </p>
+                            <button onClick={handleLogout}>
+                                Logout
+                            </button>
+                        </div>
+                    )}
+                    <br />
+                    <div className="link__to-signup text-center">
+                        Not registered yet? <br /> 
+                        <a href="/signup">
+                            Sign Up.
+                        </a>
                     </div>
-                )}
-                <br />
-                <div className="login-link">
-                    Not registered yet, 
-                    <a href="/signup">
-                        Sign Up.
-                    </a>
                 </div>
             </div>
         </>

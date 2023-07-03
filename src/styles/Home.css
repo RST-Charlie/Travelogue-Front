@@ -1,22 +1,28 @@
-.home{
+.home {
     display:flex;
 }
 
-.logo-mission {
-    display:flex;
-    flex-direction:column;
-    padding-left:11vw;
-    padding-top:12vw;
+.header__home {
+    margin-left: 8dvw;
+    margin-top: 20dvh;
 }
 
-.title{
-    font-size: 9vw;
+.title__home {
+    font-size: clamp(50px, 50dvh, 120px);
     color:white;
 }
 
-.mission{
+.mission__home {
     color:white;
-    font-size:3vw
+    font-size: clamp(20px, 8dvh, 40px);
+}
+
+.move-image__home {
+    animation: moveImage 30s linear infinite;
+    height: clamp(200px, 50dvw, 600px);
+    margin-top: 12dvh;
+    margin-right: 15dvw;
+    margin-bottom: 7dvh;
 }
 
 @keyframes moveImage {
@@ -36,10 +42,4 @@
         transform: translateX(0) translateY(0);
     }
 }
-  
-.move-image {
-    animation: moveImage 30s linear infinite;
-    height: 50vw;
-    padding-top: 20vh;
-}
-  
+ 

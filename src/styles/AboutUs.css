@@ -1,50 +1,18 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-}
-
-html {
-    box-sizing: border-box;
-}
-
-*, *:before, *:after {
-    box-sizing: inherit;
-}
-
-.column {
-    float: left;
-    width: 25%;
-    margin-bottom: 16px;
-    padding: 0 8px;
-}
-
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    margin: 8px;
-}
-
-.about-section {
-    padding: 50px;
+.header__about-us {
+    padding: 4dvh;
     text-align: center;
-    background-color: #8c52ff;
+    background-color: var(--trans-orange);
     color: white;
 }
 
-.about-us-container {
-    padding: 0 16px;
+.card__about-us {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.about-us-container::after, .row::after {
-    clear: both;
-    display: table;
-}
-
-.about-us-title {
-    color: grey;
-}
-
-.button:hover {
-    background-color: #555;
+.para__about-us {
+    width: auto;
+    margin-left: 30dvw;
+    margin-right: 30dvw;
 }
 
 @media screen and (max-width: 650px) {
