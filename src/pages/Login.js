@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/LogIn.css';
 import "animate.css";
@@ -6,12 +6,6 @@ import "animate.css";
 const Login = ({ login }) => {
     const formRef = useRef();
     const navigate = useNavigate();
-    const [loggedIn, setLoggedIn] = useState(false);
-    
-
-    const handleLogout = () => {
-        setLoggedIn(false);
-    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -51,7 +45,6 @@ const Login = ({ login }) => {
                         animate__animated 
                         animate__slideInUp"
                 >
-                    {!loggedIn? (
                         <form ref={formRef} onSubmit={handleSubmit}>
                             <label>
                                 Email:
@@ -75,18 +68,6 @@ const Login = ({ login }) => {
                                 className="submit__login" 
                             />
                         </form>
-                    ) : (
-                        <div>
-                            <p>
-                                You are logged in!
-
-                            </p>
-                            <button onClick={handleLogout}>
-                                Logout
-                            </button>
-                        </div>
-                    )}
-                    <br />
                     <div className="link__to-signup text-center">
                         Not registered yet? <br /> 
                         <a href="/signup">
