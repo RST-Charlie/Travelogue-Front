@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, FormGroup, Label, Input, Button, Row, Col } from "reactstrap"
+import { Form, FormGroup, Label, Input, Button, Row, Col, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap"
 import '../styles/TravelLogueEdit.css';
 import countries from '../components/Countries'
 import regions from '../components/Regions'
@@ -9,6 +9,10 @@ import { useParams, useNavigate } from "react-router-dom"
 const TravelLogueEdit = ({ trips, updateTrip, deleteTrip, currentUser }) => {   
     const { id } = useParams()
     let currentTrip = trips?.find((trip) => trip.id === +id)
+    const [modal, setModal] = useState(false)
+    const [backdrop, setBackdrop] = useState(true)
+    
+    const toggle = () => setModal(!modal)
 
     const [editTrip, setEditTrip] = useState({
         title: currentTrip?.title,
@@ -235,11 +239,24 @@ const TravelLogueEdit = ({ trips, updateTrip, deleteTrip, currentUser }) => {
                             className='btn-details__edit--edit'>
                             Confirm Changes!
                         </Button>
-                        <Button onClick={handleDelete} 
+                        <Button onClick={toggle} 
                             className='btn-details__edit--delete'
                         >
                             Delete Trip
                         </Button>
+                        <Modal isOpen={modal} toggle={toggle}>
+                            <ModalHeader toggle={toggle}>
+                                Are you sure you want to delete?
+                            </ModalHeader>
+                            <ModalFooter className='text-center'>
+                                <Button className='btn-details__edit--delete' onClick={handleDelete}>
+                                    Delete
+                                </Button>
+                                <Button className='btn-details__edit--edit' onClick={toggle}>
+                                    Cancel
+                                </Button>
+                            </ModalFooter>
+                        </Modal>
                     </Col>
                 </Row>
             </Form>
