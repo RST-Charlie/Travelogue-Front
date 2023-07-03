@@ -51,7 +51,7 @@ const AboutUs = () => {
                     <CardBody className='px-3 py-4'>
                         <h2>Sarah Cherry</h2>
                         <p>Tech Lead/Anchor</p>
-                        <p className='text__about-us'> Assumes responsibility for the code base and version control, ensuring its integrity and efficient management throughout the project. </p>
+                        <p className='text__about-us'> Assumes responsibility for the code base and version control, ensuring its integrity and efficient management throughout the project. Strong understanding of the technical needs, and serves as the guardian of GitHub.</p>
                     </CardBody>
                     <CardFooter className="text-center" >
                         <a href="https://www.linkedin.com/in/sarah-m-cherry/" target="blank" class="test">
@@ -93,7 +93,7 @@ const AboutUs = () => {
                     <CardBody>
                         <h2>Surielis Rodriguez</h2>
                         <p>Lead Design</p>
-                        <p className='text__about-us'> Has ownership of the project's aesthetics, color scheme, and branding, ensuring a cohesive and visually appealing experience for users. </p>
+                        <p className='text__about-us'> Responsible for the project's look, color scheme, and branding, while also ensuring intuitive navigation, and a cohesive and visually appealing experience for users.  </p>
                     </CardBody>
                     <CardFooter className='text-center'>
                         <a href="https://www.linkedin.com/in/surielis-rodriguez/" target="blank" class="test">
@@ -137,7 +137,7 @@ const AboutUs = () => {
                     <CardBody>
                         <h2>Scott Tuschl</h2>
                         <p>Product Manager</p>
-                        <p className='text__about-us'>  Controls the overarching vision of the product, ensuring that it aligns with the requirements and specifications to deliver a successful outcome. </p>
+                        <p className='text__about-us'>  Controls the overarching vision of the product, ensuring it meets all requirements, while providing strong management support to the team and resolving any blockers, managing conversations around significant app changes. </p>
                     </CardBody>
                     <CardFooter className="text-center" >
                         <a href="https://www.linkedin.com/in/scott-tuschl/" target="blank" class="test">
@@ -181,7 +181,7 @@ const AboutUs = () => {
                     <CardBody>
                         <h2>Ramgel Romo</h2>
                         <p>Project Manager</p>
-                        <p className='text__about-us'> Responsible for internal team communication, collaboration, and project management oversight for efficient coordination. </p>
+                        <p className='text__about-us'> Responsible for internal team communication and oversee the project management board, ensuring strong communication, proper assignment of developers, tracking of PRs for review and approval, and management of external resources. </p>
                     </CardBody>
                     <CardFooter className="text-center" >
                         <a href="https://www.linkedin.com/in/romoramgel/" target="blank" class="test">
