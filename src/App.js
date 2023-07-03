@@ -20,7 +20,7 @@ import mockTrips from './mockTrips';
 
 const App = () => {
 
-    const [currentUser, setCurrentUser] = useState([null]);
+    const [currentUser, setCurrentUser] = useState(null);
     const [trips, setTrips] = useState([])
     
     const url = "https://travelogue-d6r2.onrender.com";
