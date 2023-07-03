@@ -15,60 +15,53 @@ Dependencies:
 
 For the Front End (you will need to use yarn in your terminal to add dependencies), you can check your package.json file and ensure the proper dependencies have been installed:
 
-1.  Add react-router
+1.  Add yarn
+
+ yarn install 
+
+2.  Add react-router
 
  yarn add react-router
  
  import { Routes, Route } from 'react-router-dom' and'
  import { BrowserRouter } from 'react-router-dom' on components pages
- in App.test.js make sure you import import { render, screen } from '@testing-library/react'
+ in App.test.js make sure you import { render, screen } from '@testing-library/react'
+
  <BrowserRouter>
     <App />
  </BrowserRouter>
 
- 2.  Add react testing library
+ 3.  Add react testing library
 
  yarn add react-testing-library
 
- import import { render } from '@testing-library/react' in testing files
+ import { render } from '@testing-library/react' in testing files
 
- 3.  Add react-strap
+ 4.  Add react-strap
 
  yarn add react-strap
 
- 4.  Add strap
+ 5.  Add strap
 
  yarn add strap
 
- 5.  Add bootstrap
+ 6.  Add bootstrap
 
  yarn add bootsrap
 
  Add testing suites
 
- 6.  Add jest
+ 7.  Add jest
 
  yarn add jest
 
- 7.  Add Animate CSS
+ 8.  Add Animate CSS
  
  yarn add animate.css
 
  import 'animate.css' 
  
- 8.  Add leaflet
-
- yarn add leaflet react-leaflet
-
- 9.  STRETCH Add redux
-
- yarn add redux
-
- 10.  STRETCH Add redux toolkit
-
- yarn add redux-toolkit
-
- 
+ 9.  Render - Only a 3 month life cycle  
 
 
 Backend
@@ -82,6 +75,8 @@ bundle
 3. rails db:migrate
 
 4. rails sprec rspec 
+
+5. Render - Only 3 month life cycle
 
 
 
