@@ -83,7 +83,7 @@ const TravelLogueProtectedShow = ({ currentUser, trips}) => {
                                         btn-details-back__proshow 
                                         my-3 
                                         text-center"
-                                    href={`/demotrips`}
+                                    href={`/mytrips`}
                                 >   
                                     Back to all
                                 </Button>

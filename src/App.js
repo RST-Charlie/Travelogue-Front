@@ -150,9 +150,7 @@ const App = () => {
 
         <div className="app gradient-background">
             <Header currentUser={currentUser} logout={logout}/>
-            
-        <Routes>
-                
+            <Routes>
                 <Route 
                     path="/" 
                     element={<Home />} 
