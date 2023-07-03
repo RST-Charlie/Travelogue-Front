@@ -1,9 +1,8 @@
 import React from 'react';
-import { fireEvent, render, screen } from '@testing-library/react';
-import { BrowserRouter, MemoryRouter, Routes, Route } from 'react-router-dom';
+import { render, screen } from '@testing-library/react';
+import { MemoryRouter, Routes, Route } from 'react-router-dom';
 import TravelLogueProtectedShow from '../pages/TravelLogueProtectedShow';
 import mockTrips from '../mockTrips';
-import { Button, Card } from 'reactstrap';
 
 describe('<TravelLogueProtectedShow />', () => {
     beforeEach(() => {

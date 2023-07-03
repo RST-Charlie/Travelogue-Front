@@ -1,9 +1,7 @@
 import React from 'react' 
-import { fireEvent, render, screen } from '@testing-library/react';
-import { BrowserRouter, MemoryRouter } from 'react-router-dom';
+import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import TravelLogueProtectedIndex from '../pages/TravelLogueProtectedIndex';
-import mockTrips from '../mockTrips';
-import { Button, Card } from 'reactstrap';
 
 describe('TravelLogueProtectedIndex', () => {
     const currentUser = { id: 1 }; 
