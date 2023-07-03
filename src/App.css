@@ -23,7 +23,7 @@ body {
     font-size: 18px;
 }
 
-.App {
+.app {
     background: linear-gradient(90deg, var(--purple), var(--orange));
     min-height: 100vh;
     font-family: 'Pathway Gothic One';
