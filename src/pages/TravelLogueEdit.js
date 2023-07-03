@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, FormGroup, Label, Input, Button, Row, Col, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap"
+import { Form, FormGroup, Label, Input, Button, Row, Col, Modal, ModalHeader, ModalFooter } from "reactstrap"
 import '../styles/TravelLogueEdit.css';
 import countries from '../components/Countries'
 import regions from '../components/Regions'
