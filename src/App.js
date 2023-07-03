@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
+import PackingList from './pages/PackingList';
 import AboutUs from './pages/AboutUs';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
@@ -175,6 +176,10 @@ const App = () => {
                 <Route 
                     path="/signup" 
                     element={<SignUp signup={signup}/>} 
+                />
+                <Route 
+                    path="/PackingList" 
+                    element={<PackingList currentUser={currentUser} trips={trips} />} 
                 />
                 {currentUser && (
                     <>

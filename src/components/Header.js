@@ -40,6 +40,9 @@ const Header = ({ currentUser, logout }) => {
                                 <NavItem>
                                     <NavLink href="/mytrips">My Trips</NavLink>
                                 </NavItem>
+                                <NavItem>
+                                    <NavLink href="/PackingList">My List</NavLink>
+                                </NavItem>
                             </>
                         )}
                         {!currentUser && (

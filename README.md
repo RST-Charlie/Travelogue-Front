@@ -4,6 +4,9 @@ Overview:
 
 The scope and purpose of this application is to target a specigic group of users that enjoy travel either domestically in the United States or Internationally.  The purpose of our app is to accomidate the traveling user by providing a means to log and track their adventures in travel and foster an enviornment that will help keep track of memories made and the joy of traveling.  We are absolutley thrilled to undertake this 'adventure' and know that Travelogue will be just as vital to you as your passport!
 
+live link frontend: https://travelogue-app.onrender.com/
+live link backend: https://travelogue-d6r2.onrender.com/
+
 Features:
 
 User will be able to create a account and manage experiences by entering data into a forum that logs their destination, when they arrived and departed, wether or not it was domestic travel, adding photos, and journal entries.  This will help catalogue the users trips to differnt places making keeping track and recalling memories so much easier.  
