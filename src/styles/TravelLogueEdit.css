@@ -1,4 +1,4 @@
-.btn-details__edit {
+.btn-details__edit--edit {
     background-color: var(--indigo);
     color: var(--white);
     border: none;
@@ -6,13 +6,13 @@
     transition: transform 0.3s ease;
 }
 
-.btn-details__edit:hover {
+.btn-details__edit--edit:hover {
     transform: translateY(-2px);
     background-color: var(--purple);
     color: var(--white);
 }
 
-.btn-details__delete {
+.btn-details__edit--delete {
     background-color: var(--orange);
     color: var(--white);
     border: none;
@@ -20,7 +20,7 @@
     transition: transform 0.3s ease;
 }
 
-.btn-details__delete:hover {
+.btn-details__edit--delete:hover {
     transform: translateY(-2px);
     background-color: var(--red);
     color: var(--white);

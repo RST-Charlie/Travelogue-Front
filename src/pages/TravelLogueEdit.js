@@ -232,11 +232,11 @@ const TravelLogueEdit = ({ trips, updateTrip, deleteTrip, currentUser }) => {
                 <Row>
                     <Col className='text-center'>
                         <Button onClick={handleClick} 
-                            className='btn-details__edit'>
+                            className='btn-details__edit--edit'>
                             Confirm Changes!
                         </Button>
                         <Button onClick={handleDelete} 
-                            className='btn-details__delete'
+                            className='btn-details__edit--delete'
                         >
                             Delete Trip
                         </Button>
