@@ -64,8 +64,6 @@ describe('Header', () => {
         fireEvent.click(toggler)
 
         expect(collapse).not.toHaveAttribute('isOpen')
-
-
     })
 });
 
