@@ -22,4 +22,41 @@ describe('<PackingList />', () => {
         const addButton = screen.getByText(/Add/i);
         expect(addButton).toBeInTheDocument();
     });
+// });
+
+//13-15 - add item expect increase list count by one
+//20-21 - remove item expect decrease list by one
+//42-46 - may be covered with above
+
+    it('adds an item to the list', () => {
+        const input = screen.getByPlaceholderText(/Add an item/i);
+        const addButton = screen.getByText(/Add/i);
+        
+        fireEvent.change(input, { target: { value: 'Test input' } });
+        fireEvent.click(addButton);
+
+        const listItem = screen.getByText(/Test input/i);
+
+        expect(listItem).toBeInTheDocument();
+        expect(input.value).toBe('');
+        fireEvent.click(addButton);
+
+        expect(screen.queryByText(/Test input/i)).toBeInTheDocument();
+        expect(screen.getAllByRole('listitem')).toHaveLength(1);
+    });
+
+    it('removes an item from the list', () => {
+        const input = screen.getByPlaceholderText(/Add an item/i);
+        fireEvent.change(input, { target: { value: 'Test input' } });
+
+        const addButton = screen.getByText(/Add/i);
+        fireEvent.click(addButton);
+
+        const removeButton = screen.getByText(/Remove/i);
+        fireEvent.click(removeButton);
+
+        expect(screen.queryByText(/Test input/i)).not.toBeInTheDocument();
+        expect(screen.queryByText(/Remove/i)).not.toBeInTheDocument();
+        expect(screen.queryByRole('listitem')).toBeNull();
+    });
 });
