@@ -1,13 +1,14 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import Login from '../pages/Login';
 
 describe('<Login />', () => {
+    const loginMock = jest.fn()
     beforeEach(() => {
         render(
             <BrowserRouter>
-                <Login />
+                <Login login={loginMock}/>
             </BrowserRouter>
         );
     });
@@ -30,13 +31,12 @@ describe('<Login />', () => {
     it('allows a user to submit information from the form', () => {
         const username = screen.getByLabelText('Email:');
         const password = screen.getByLabelText('Password:')
-        const mockSubmit = jest.fn();
 
         fireEvent.change(username, { target: { value: 'test@email.com' } })
         fireEvent.change(password, { target: { value: 'password' } })
         fireEvent.click(screen.getByRole('button', { value: 'Login' }))
-        // expect the form to be submitted and the redirect to go home
-        expect(mockSubmit).toHaveBeenCalled()
+
+        expect(loginMock).toHaveBeenCalled()
     });
 });
 
