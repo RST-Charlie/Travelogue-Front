@@ -22,11 +22,6 @@ describe('<PackingList />', () => {
         const addButton = screen.getByText(/Add/i);
         expect(addButton).toBeInTheDocument();
     });
-// });
-
-//13-15 - add item expect increase list count by one
-//20-21 - remove item expect decrease list by one
-//42-46 - may be covered with above
 
     it('adds an item to the list', () => {
         const input = screen.getByPlaceholderText(/Add an item/i);
