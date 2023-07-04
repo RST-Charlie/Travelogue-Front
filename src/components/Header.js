@@ -38,8 +38,8 @@ const Header = ({ currentUser, logout }) => {
                     RSTech
                 </NavbarBrand>
                 <div className="links__header">
-                    <NavbarToggler onClick={toggle} dark="true"/>
-                    <Collapse isOpen={isOpen} navbar>
+                    <NavbarToggler onClick={toggle} data-testid='navtoggler' dark="true"/>
+                    <Collapse isOpen={isOpen} data-testid="navcollapse" navbar>
                     <Nav 
                         className="
                             nav__header 
