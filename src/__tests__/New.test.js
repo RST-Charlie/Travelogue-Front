@@ -1,6 +1,6 @@
 import React from 'react' 
 import { fireEvent, render, screen } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, MemoryRouter } from 'react-router-dom';
 import TravelLogueNew from '../pages/TravelLogueNew';
 
 describe('<TravelLogueNew />', () => {
@@ -23,4 +23,14 @@ describe('<TravelLogueNew />', () => {
         fireEvent.click(submit);
         expect(screen.getByText(/Please make sure you are logged in and have filled out all required fields: title, entry, country, and region./i))
     })
+
+    it('updates the "international" value in the state when the switch is checked', () => {
+        render(<TravelLogueNew />, { wrapper: MemoryRouter });
+        
+        const switchInput = screen.getByLabelText('International?', { id: "trip-international" })
+        fireEvent.click(switchInput);
+        
+        expect(switchInput.checked).toBe(true);
+    });
 });
+  
