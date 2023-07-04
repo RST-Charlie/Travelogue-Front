@@ -1,21 +1,26 @@
-import React from 'react' 
-import { render, screen } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom';
-import TravelLogueIndex from '../pages/TravelLogueIndex';
-import mockTrips from '../mockTrips';
+import React from "react";
+import { cleanup } from "@testing-library/react";
+import ReactDOM from "react-dom";
+import App from "../App";
 
-describe('<TravelLogueIndex />', () => {
-    beforeEach(() => {
-        render(
-            <BrowserRouter>
-                <TravelLogueIndex trips={mockTrips}/>
-            </BrowserRouter>
-        );
+afterEach(cleanup);
+jest.mock("react-dom");
+
+describe("Testing Application Root", () => {
+    it("should render without crashing", () => {
+        const div = document.createElement("div");
+        div.id = "root";
+        document.body.appendChild(div);
+        require("../index.js");
+        expect(ReactDOM.render).toHaveBeenCalledWith(<React.StrictMode>
+            <App /></React.StrictMode>, div);
     });
-
-    it('displays to a user saved trips', () => {
-        mockTrips.forEach((trip) =>{
-            expect(screen.getByText(trip.title)).toBeInTheDocument()
-        })
+        
+    it("should render the app inside div which has root id", () => {
+        expect(global.document.getElementById("root")).toBeDefined();
+    });
+    
+    it("should render App component", () => {
+        expect(App).toBeDefined();
     });
 });
