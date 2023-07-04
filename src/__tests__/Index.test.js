@@ -12,7 +12,8 @@ describe("Testing Application Root", () => {
         div.id = "root";
         document.body.appendChild(div);
         require("../index.js");
-        expect(ReactDOM.render).toHaveBeenCalledWith(<App />, div);
+        expect(ReactDOM.render).toHaveBeenCalledWith(<React.StrictMode>
+            <App /></React.StrictMode>, div);
     });
         
     it("should render the app inside div which has root id", () => {
