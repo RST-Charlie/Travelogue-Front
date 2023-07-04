@@ -5,11 +5,12 @@ import SignUp from "../pages/SignUp";
 
 
 describe("SignUp", () => {
+    const signupMock = jest.fn()
     beforeEach(() => {
         render(
             <MemoryRouter>
-                <SignUp />
-]            </MemoryRouter>
+                <SignUp signup={signupMock}/>
+            </MemoryRouter>
         )
     })
     it("renders the SignUp component", () => {
@@ -27,13 +28,12 @@ describe("SignUp", () => {
         const username = screen.getByLabelText('Email:');
         const password = screen.getByLabelText('Password:')
         const confirm = screen.getByLabelText('Confirm Password:')
-        const mockSubmit = jest.fn();
         
         fireEvent.change(username, { target: { value: 'test@email.com' } })
         fireEvent.change(password, { target: { value: 'password' } })
         fireEvent.change(confirm, { target: { value: 'password' } })
         fireEvent.click(screen.getByRole('button', { name: 'Submit' }))
 
-        expect(mockSubmit).toHaveBeenCalled()
+        expect(signupMock).toHaveBeenCalled()
     });
 })
