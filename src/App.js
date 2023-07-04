@@ -85,7 +85,6 @@ const App = () => {
     }
 
     const login = (userInfo) => {
-        console.log("Login user info on App.js:", userInfo);
         fetch(`${url}/login`, {
             body: JSON.stringify(userInfo),
             headers: {
